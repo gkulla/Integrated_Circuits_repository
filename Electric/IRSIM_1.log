@@ -1,0 +1,11 @@
+Circuit: *** SPICE deck for cell IRSIM_1{sch} from library prova_library2_IRSIM
+
+Error on line 11 : m:inverter@0:nmos-4@0 out«:out» in«:in» gnd«:gnd» gnd«:gnd» n l=0.4u w=0.8u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 12 : m:inverter@0:pmos-4@0 out«:out» in«:in» vdd«:vdd» vdd«:vdd» p l=0.4u w=1.6u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Fatal Error: No analysis request found.

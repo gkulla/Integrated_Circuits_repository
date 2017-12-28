@@ -1,0 +1,32 @@
+Circuit: *** SPICE deck for cell D_vs_VBS_PMOS{sch} from library prova_library4_Nand_lay
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+.step vvbs=0
+.step vvbs=1
+.step vvbs=2
+.step vvbs=3
+.step vvbs=4
+.step vvbs=5
+
+Date: Wed Nov 04 20:25:38 2015
+Total elapsed time: 0.699 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 60024
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 6
+fillins = 0
+solver = Normal
+Matrix Compiler1: 236 bytes object code size  0.1/0.2/[0.1]
+Matrix Compiler2: 364 bytes object code size  0.1/0.2/[0.1]
+
+

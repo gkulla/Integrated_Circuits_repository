@@ -1,0 +1,35 @@
+*** SPICE deck for cell hw5{lay} from library hw5
+*** Created on Tue Nov 17, 2015 23:34:20
+*** Last revised on Wed Nov 18, 2015 01:50:55
+*** Written on Wed Nov 18, 2015 01:51:03 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: hw5{lay}
+Mnmos_0 net_171 A net_7 0 N L=0.7U W=3.5U AS=8.983P AD=9.188P PS=12.133U PD=12.25U
+Mnmos_1 net_1 B net_171 0 N L=0.7U W=3.5U AS=9.188P AD=6.737P PS=12.25U PD=8.517U
+Mnmos_2 net_5 D net_1 0 N L=0.7U W=3.5U AS=6.737P AD=13.475P PS=8.517U PD=11.2U
+Mnmos_3 net_7 C net_5 0 N L=0.7U W=3.5U AS=13.475P AD=8.983P PS=11.2U PD=12.133U
+Mnmos_4 net_1 CLOCK 0 0 N L=0.7U W=3.5U AS=31.85P AD=6.737P PS=39.2U PD=8.517U
+Mnmos_5 net_58 net_7 0 0 N L=0.7U W=3.5U AS=31.85P AD=8.269P PS=39.2U PD=11.725U
+Mnmos_6 net_96 net_58 net_107 0 N L=0.7U W=3.5U AS=9.392P AD=7.146P PS=12.367U PD=8.75U
+Mnmos_7 net_163 C net_96 0 N L=0.7U W=3.5U AS=7.146P AD=8.269P PS=8.75U PD=11.725U
+Mnmos_8 net_107 A net_163 0 N L=0.7U W=3.5U AS=8.269P AD=9.392P PS=11.725U PD=12.367U
+Mnmos_9 0 CLOCK net_96 0 N L=0.7U W=3.5U AS=7.146P AD=31.85P PS=8.75U PD=39.2U
+Mnmos_10 F net_107 0 0 N L=0.7U W=3.5U AS=31.85P AD=9.188P PS=39.2U PD=12.25U
+Mpmos_1 net_7 CLOCK vdd vdd P L=0.7U W=3.5U AS=24.041P AD=8.983P PS=30.362U PD=12.133U
+Mpmos_2 net_58 net_7 vdd vdd P L=0.7U W=3.5U AS=24.041P AD=8.269P PS=30.362U PD=11.725U
+Mpmos_3 net_107 CLOCK vdd vdd P L=0.7U W=3.5U AS=24.041P AD=9.392P PS=30.362U PD=12.367U
+Mpmos_4 F net_107 vdd vdd P L=0.7U W=3.5U AS=24.041P AD=9.188P PS=30.362U PD=12.25U
+
+* Spice Code nodes in cell cell 'hw5{lay}'
+vdd vdd 0 DC 1.8
+vss vss 0 DC 0
+vinclock clock 0 pulse(1.8 0 0 0 0 5ns 10ns)
+vinA A 0 DC 1.8
+vinB B 0 DC 1.8
+vinC C 0 DC 1.8
+vinD D 0 pulse(1.8 0 0 0 0 5ns 10ns)
+.trans 0 40ns
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

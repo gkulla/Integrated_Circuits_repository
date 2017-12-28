@@ -1,0 +1,69 @@
+*** SPICE deck for cell MUX{sch} from library prova_library2_IRSIM
+*** Created on Sun Nov 29, 2015 15:32:38
+*** Last revised on Sun Nov 29, 2015 18:32:13
+*** Written on Sun Nov 29, 2015 18:32:22 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*** WARNING: no power connection for P-transistor wells in cell 'Transmission_Gate{sch}'
+*** WARNING: no ground connection for N-transistor wells in cell 'Transmission_Gate{sch}'
+
+*** SUBCIRCUIT prova_library2_IRSIM__Transmission_Gate FROM CELL Transmission_Gate{sch}
+.SUBCKT prova_library2_IRSIM__Transmission_Gate A B notB Out
+Mnmos-4@0 A B Out Out n L=0.4U W=0.8U
+Mpmos-4@0 Out notB A A p L=0.4U W=1.6U
+
+* Spice Code nodes in cell cell 'Transmission_Gate{sch}'
+**VDD VDD 0 DC 1.8
+**VGND GND 0 DC 0
+**VA A 0 DC 1.8
+**VB B 0 DC 1.8
+**.TRAN 0 50n
+**.include C:\Electric\MODEL_MOS.txt
+.ENDS prova_library2_IRSIM__Transmission_Gate
+
+*** SUBCIRCUIT prova_library2_IRSIM__inverter FROM CELL inverter{sch}
+.SUBCKT prova_library2_IRSIM__inverter In Out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 Out In gnd gnd n L=0.4U W=0.8U
+Mpmos-4@0 Out In vdd vdd p L=0.4U W=1.6U
+.ENDS prova_library2_IRSIM__inverter
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: MUX{sch}
+XTransmis@0 A3 S0 net@84 net@13 prova_library2_IRSIM__Transmission_Gate
+XTransmis@1 A4 net@84 S0 net@17 prova_library2_IRSIM__Transmission_Gate
+XTransmis@2 A5 S0 net@84 net@17 prova_library2_IRSIM__Transmission_Gate
+XTransmis@3 A6 net@84 S0 net@21 prova_library2_IRSIM__Transmission_Gate
+XTransmis@4 A7 S0 net@84 net@21 prova_library2_IRSIM__Transmission_Gate
+XTransmis@5 A2 net@84 S0 net@13 prova_library2_IRSIM__Transmission_Gate
+XTransmis@6 A1 S0 net@84 net@10 prova_library2_IRSIM__Transmission_Gate
+XTransmis@7 A0 net@84 S0 net@10 prova_library2_IRSIM__Transmission_Gate
+XTransmis@8 net@21 S1 net@134 net@49 prova_library2_IRSIM__Transmission_Gate
+XTransmis@9 net@17 net@134 S1 net@49 prova_library2_IRSIM__Transmission_Gate
+XTransmis@10 net@13 S1 net@134 net@45 prova_library2_IRSIM__Transmission_Gate
+XTransmis@11 net@10 net@134 S1 net@45 prova_library2_IRSIM__Transmission_Gate
+XTransmis@12 net@45 net@146 S2 Out prova_library2_IRSIM__Transmission_Gate
+XTransmis@13 net@49 S2 net@146 Out prova_library2_IRSIM__Transmission_Gate
+Xinverter@0 S0 net@84 prova_library2_IRSIM__inverter
+Xinverter@1 S1 net@134 prova_library2_IRSIM__inverter
+Xinverter@2 S2 net@146 prova_library2_IRSIM__inverter
+
+* Spice Code nodes in cell cell 'MUX{sch}'
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VA0 A0 0 DC 5
+VA1 A1 0 DC 0
+VA2 A2 0 DC 5
+VA3 A3 0 DC 0
+VA4 A4 0 DC 0
+VA5 A5 0 DC 0
+VA6 A6 0 DC 0
+VA7 A7 0 DC 0
+VS0 S0 0 DC 0
+VS1 S1 0 DC 0
+VS2 S2 0 DC 0
+.tran 0 45ns
+.include C:\Electric\MODEL_MOS.txt
+.END

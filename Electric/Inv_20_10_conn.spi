@@ -1,0 +1,16 @@
+*** SPICE deck for cell Inv_20_10_conn{ic} from library CMOSedu_3
+*** Created on Sun Sep 06, 2015 17:28:44
+*** Last revised on Tue Sep 08, 2015 23:02:21
+*** Written on Tue Sep 08, 2015 23:02:57 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: Inv_20_10_conn{ic}
+
+* Spice Code nodes in cell cell 'Inv_20_10_conn{ic}'
+VDD VDD 0 DC 5
+Vgnd GND 0 DC 0
+Vin in 0 DC 0
+.include C:\Electric\C5_models.txt
+.DC Vin 0 5 1mV
+.END

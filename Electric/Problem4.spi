@@ -1,0 +1,31 @@
+*** SPICE deck for cell Problem4{lay} from library prova_library2_IRSIM
+*** Created on Fri Oct 30, 2015 21:09:39
+*** Last revised on Sun Nov 08, 2015 14:53:42
+*** Written on Sun Nov 08, 2015 14:53:48 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: Problem4{lay}
+Mnmos@0 Out A net@0 gnd n L=0.4U W=1U AS=0.45P AD=1.725P PS=2.1U PD=4.45U
+Mnmos@1 net@0 B gnd gnd n L=0.4U W=1U AS=5.35P AD=0.45P PS=12.7U PD=2.1U
+Mnmos@2 gnd D net@1 gnd n L=0.4U W=1U AS=0.45P AD=5.35P PS=2.1U PD=12.7U
+Mnmos@3 net@1 C Out gnd n L=0.4U W=1U AS=1.725P AD=0.45P PS=4.45U PD=2.1U
+Mpmos@0 net@6 A vdd vdd p L=0.4U W=2U AS=5.933P AD=2.8P PS=13U PD=6.8U
+Mpmos@1 vdd B net@9 vdd p L=0.4U W=2U AS=1.9P AD=5.933P PS=3.9U PD=13U
+Mpmos@2 net@9 D Out vdd p L=0.4U W=2U AS=1.725P AD=1.9P PS=4.45U PD=3.9U
+Mpmos@3 Out C vdd vdd p L=0.4U W=2U AS=5.933P AD=1.725P PS=13U PD=4.45U
+
+* Spice Code nodes in cell cell 'Problem4{lay}'
+VDD VDD 0 DC 1.8
+VGND GND 0 DC 0
+VA A 0 DC 0
+VB B 0 DC 0
+VC C 0 DC 1.8
+**VD D 0 Pulse(0 1.8 5ns 0n 0n 5ns 15ns)
+**VD D 0 PWL (0 0 5n 1.8 9.9n 1.8 10n 0)
+VD D 0 PWL REPEAT FOREVER(0 0 4.99n 0 5n 1.8 9.99n 1.8 10n 0 19.99n 0 20n 1.8 24.99n 1.8 25n 0 34.99n 0 35n 1.8 44.99n 1.8 45n 0) ENDREPEAT
+**VD D 0 PWL REPEAT FOREVER (0 0 5n 1.8 9.9n 1.8 10n 0) ENDREPEAT
+**VD D 0 DC 0
+.tran 0 50ns
+.include C:\Electric\MODEL_MOS.txt
+.END

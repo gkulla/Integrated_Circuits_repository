@@ -1,0 +1,21 @@
+*** SPICE deck for cell inverter_sim_Series{lay} from library prova_library2_IRSIM
+*** Created on Fri Sep 25, 2015 16:02:53
+*** Last revised on Sun Oct 18, 2015 12:25:52
+*** Written on Thu Oct 22, 2015 14:51:03 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: prova_library2_IRSIM:inverter_sim_Series{lay}
+Mnmos@0 Out In gnd gnd n L=0.4U W=1U AS=4.21P AD=2.1P PS=10.5U PD=5.8U
+Mnmos@1 gnd Pl Out_Pl gnd n L=0.4U W=1U AS=2.1P AD=4.21P PS=5.8U PD=10.5U
+Mpmos@0 Out In vdd vdd p L=0.4U W=2U AS=5.015P AD=2.1P PS=11.3U PD=5.8U
+Mpmos@1 vdd Pl Out_Pl vdd p L=0.4U W=2U AS=2.1P AD=5.015P PS=5.8U PD=11.3U
+
+* Spice Code nodes in cell cell 'prova_library2_IRSIM:inverter_sim_Series{lay}'
+VDD VDD 0 DC 1.8
+VGND GND 0 DC 0
+Vin in 0 Pulse(1.8 0 0 100p 100p 10n 20n)
+Vpl pl 0 Pulse(1.8 0 0 100p 100p 10n 20n)
+.TRAN 0 50n
+.include C:\Electric\MODEL_MOS.txt
+.END

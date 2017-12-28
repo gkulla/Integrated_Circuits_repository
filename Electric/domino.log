@@ -1,0 +1,30 @@
+Circuit: *** SPICE deck for cell domino{lay} from library prova_library2_IRSIM
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+WARNING: Less than two connections to node NET@79.  This node is used by MNMOS@7.
+WARNING: Less than two connections to node NET@238.  This node is used by MNMOS@15.
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Nov 19 23:49:30 2015
+Total elapsed time: 0.359 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4036
+traniter = 4005
+tranpoints = 1504
+accept = 1443
+rejected = 61
+matrix size = 32
+fillins = 0
+solver = Normal
+Thread vector: 68.8/38.7[3] 15.8/6.3[3] 3.9/2.0[3] 0.6/87.4[1]  2592/500
+Matrix Compiler1: 2.02 KB object code size  1.8/1.0/[0.4]
+Matrix Compiler2: 3.19 KB object code size  0.8/1.2/[0.7]
+
+

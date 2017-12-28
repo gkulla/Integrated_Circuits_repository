@@ -1,0 +1,15 @@
+*** SPICE deck for cell pad{sch} from library Indipendent_Study
+*** Created on Sat Jul 08, 2017 12:01:02
+*** Last revised on Sun Jul 23, 2017 13:26:04
+*** Written on Sun Jul 23, 2017 13:26:23 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: pad{sch}
+
+* Spice Code nodes in cell cell 'pad{sch}'
+vdd vdd 0 DC 5
+vin in 0 DC 0
+.dc vin 0 5 1m
+.include C:\Electric\panic\C5_models.txt
+.END

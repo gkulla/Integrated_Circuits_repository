@@ -1,0 +1,22 @@
+*** SPICE deck for cell transmission_gate{sch} from library transmission_gate
+*** Created on Tue Dec 01, 2015 01:00:25
+*** Last revised on Tue Dec 01, 2015 01:23:50
+*** Written on Tue Dec 01, 2015 01:24:01 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global 0 vdd
+
+*** TOP LEVEL CELL: transmission_gate:transmission_gate{sch}
+Mnmos_0 A C B 0 N L=0.7U W=3.5U
+Mnmos_1 net_16 C 0 0 N L=0.7U W=3.5U
+Mpmos_0 B net_16 A vdd P L=0.7U W=3.5U
+Mpmos_1 vdd C net_16 vdd P L=0.7U W=7U
+
+* Spice Code nodes in cell cell 'transmission_gate:transmission_gate{sch}'
+vdd vdd 0 DC 3.3
+vinA A 0 DC 3.3
+vinC C 0 pwl(0 0 1ns 3.3 2ns 0 3ns 3.3)
+.trans 0 4ns
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

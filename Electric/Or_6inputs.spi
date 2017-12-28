@@ -1,0 +1,37 @@
+*** SPICE deck for cell Or_6inputs{sch} from library prova_library4_Nand_lay
+*** Created on Sun Dec 13, 2015 17:52:34
+*** Last revised on Sun Dec 13, 2015 18:05:09
+*** Written on Sun Dec 13, 2015 18:05:15 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Or_6inputs{sch}
+Mnmos-4@0 net@8 E gnd gnd N L=0.7U W=1.75U
+Mnmos-4@1 net@8 F gnd gnd N L=0.7U W=1.75U
+Mnmos-4@3 Out net@8 gnd gnd n L=0.7U W=1.75U
+Mnmos-4@4 net@8 D gnd gnd N L=0.7U W=1.75U
+Mnmos-4@5 net@8 C gnd gnd N L=0.7U W=1.75U
+Mnmos-4@6 net@8 B gnd gnd N L=0.7U W=1.75U
+Mnmos-4@7 net@8 A gnd gnd N L=0.7U W=1.75U
+Mpmos-4@0 net@3 D net@101 net@101 P L=0.7U W=3.5U
+Mpmos-4@1 net@101 C net@93 net@93 P L=0.7U W=3.5U
+Mpmos-4@2 net@93 B net@11 net@11 P L=0.7U W=3.5U
+Mpmos-4@3 Out net@8 vdd vdd p L=0.7U W=3.5U
+Mpmos-4@4 net@2 E net@3 net@3 P L=0.7U W=3.5U
+Mpmos-4@5 net@8 F net@2 net@2 P L=0.7U W=3.5U
+Mpmos-4@6 net@11 A vdd vdd P L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell 'Or_6inputs{sch}'
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VB B 0 DC 0
+VA A 0 DC 0
+VC C 0 DC 0
+VD D 0 DC 0
+VE E 0 DC 0
+VF F 0 DC 0
+.incude C:\Electric\MODEL_MOS.txt
+.tran 0 40n
+.END

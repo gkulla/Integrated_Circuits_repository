@@ -1,0 +1,28 @@
+*** SPICE deck for cell 4inputlogic{sch} from library hw4_4
+*** Created on Tue Nov 03, 2015 18:42:59
+*** Last revised on Wed Nov 04, 2015 22:37:43
+*** Written on Wed Nov 04, 2015 22:39:24 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global 0 vdd
+
+*** TOP LEVEL CELL: 4inputlogic{sch}
+Mnmos_0 F A net_105 0 N L=0.7U W=3.5U
+Mnmos_1 net_105 B 0 0 N L=0.7U W=3.5U
+Mnmos_2 F C net_109 0 N L=0.7U W=3.5U
+Mnmos_3 net_109 D 0 0 N L=0.7U W=3.5U
+Mpmos_0 net_43 C vdd vdd P L=0.7U W=3.5U
+Mpmos_1 net_43 D vdd vdd P L=0.7U W=3.5U
+Mpmos_2 F A net_43 vdd P L=0.7U W=3.5U
+Mpmos_3 F B net_43 vdd P L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell '4inputlogic{sch}'
+vdd vdd 0 DC 1.8
+vinA A 0 DC 0
+vinB B 0 DC 1.8
+vinC C 0 DC 1.8
+vinD D 0 pulse(1.8 0 0 0 0 5ns 10ns)
+.trans 0 40ns
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

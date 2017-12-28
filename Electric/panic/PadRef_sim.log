@@ -1,0 +1,5 @@
+Circuit: *** SPICE deck for cell PadRef_sim{sch} from library Indipendent_Study
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Fatal Error: Missing model name in CPL statement: "p:padref@0:mos-vth-4@1 vdd«:vdd» vdd«:vdd» in«:in» vdd«:vdd» padref@0:area=1.8p "

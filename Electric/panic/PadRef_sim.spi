@@ -1,0 +1,26 @@
+*** SPICE deck for cell PadRef_sim{sch} from library Indipendent_Study
+*** Created on Sun Jul 23, 2017 13:08:21
+*** Last revised on Sun Jul 23, 2017 19:41:16
+*** Written on Sun Jul 23, 2017 19:42:05 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT Indipendent_Study__PadRef FROM CELL Indipendent_Study:PadRef{sch}
+.SUBCKT Indipendent_Study__PadRef in
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 in gnd gnd gnd N L=0.6U W=1.5U
+pmos-vth-4@1 vdd vdd in vdd AREA=1.8P
+.ENDS Indipendent_Study__PadRef
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Indipendent_Study:PadRef_sim{sch}
+XPadRef@0 in Indipendent_Study__PadRef
+
+* Spice Code nodes in cell cell 'Indipendent_Study:PadRef_sim{sch}'
+vdd vdd 0 DC 5
+vin in 0 DC 0
+.dc vin 0 5 1m
+.include C:\Electric\panic\C5_models.txt
+.END

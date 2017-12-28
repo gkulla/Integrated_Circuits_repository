@@ -1,0 +1,37 @@
+*** SPICE deck for cell hwsix_second_part{sch} from library prova_library2_IRSIM
+*** Created on Mon Nov 30, 2015 21:20:28
+*** Last revised on Wed Dec 02, 2015 21:51:21
+*** Written on Wed Dec 02, 2015 21:51:26 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: hwsix_second_part{sch}
+Ccap@0 gnd Out1 10f
+Ccap@1 gnd Out2 10f
+Mnmos-4@0 net@33 A2 net@25 net@25 n L=0.4U W=0.6U
+Mnmos-4@1 net@25 A3 net@10 net@10 n L=0.4U W=0.6U
+Mnmos-4@2 net@10 CK gnd gnd n L=0.4U W=0.6U
+Mnmos-4@3 Out1 A1 net@33 net@33 n L=0.4U W=0.6U
+Mnmos-4@4 net@64 B2 net@57 net@57 n L=0.4U W=0.6U
+Mnmos-4@5 net@57 B3 net@41 net@41 n L=0.4U W=0.6U
+Mnmos-4@6 net@41 CK gnd gnd n L=0.4U W=0.6U
+Mnmos-4@7 Out2 Out1 net@64 net@64 n L=0.4U W=0.6U
+Mnmos-4@8 net@206 net@104 gnd gnd n L=0.4U W=0.6U
+Mpmos-4@0 Out1 CK vdd vdd n L=0.4U W=1U
+Mpmos-4@1 Out2 CK vdd vdd n L=0.4U W=1U
+Mpmos-4@2 net@206 net@104 vdd vdd n L=0.4U W=1U
+
+* Spice Code nodes in cell cell 'hwsix_second_part{sch}'
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VA1 A1 0 DC 5
+VA2 A2 0 DC 5
+VA3 A3 0 DC 5
+VB2 B2 0 DC 5
+VB3 B3 0 DC 5
+VCK CK 0 DC PWL REPEAT FOREVER(0 0 0.1n 5 0.9n 5 1n 0 2n 0)ENDREPEAT
+.tran 0 4.5ns
+.include C:\Electric\MODEL_MOS.txt
+.END

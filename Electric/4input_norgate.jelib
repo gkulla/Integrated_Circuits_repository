@@ -1,0 +1,7 @@
+# header information:
+H4input_norgate|9.06
+
+# Technologies:
+Tbicmos|ScaleFORbicmos()D350.0
+Tmocmos|ScaleFORmocmos()D350.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+Tmocmossub|ScaleFORmocmossub()D350.0

@@ -1,0 +1,28 @@
+*** SPICE deck for cell hw5_2{lay} from library hw5_2
+*** Created on Wed Nov 18, 2015 07:26:47
+*** Last revised on Wed Nov 18, 2015 09:39:47
+*** Written on Wed Nov 18, 2015 09:47:34 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: hw5_2{lay}
+Mnmos_0 net_61 x f 0 N L=0.7U W=3.5U AS=7.044P AD=9.494P PS=9.275U PD=8.925U
+Mnmos_1 net_2 y net_61 0 N L=0.7U W=3.5U AS=9.494P AD=6.737P PS=8.925U PD=8.517U
+Mnmos_2 net_4 x net_2 0 N L=0.7U W=3.5U AS=6.737P AD=9.188P PS=8.517U PD=12.25U
+Mnmos_3 f z net_4 0 N L=0.7U W=3.5U AS=9.188P AD=7.044P PS=12.25U PD=9.275U
+Mnmos_4 net_4 w f 0 N L=0.7U W=3.5U AS=7.044P AD=9.188P PS=9.275U PD=12.25U
+Mnmos_5 0 clock net_2 0 N L=0.7U W=3.5U AS=6.737P AD=20.825P PS=8.517U PD=29.4U
+Mpmos_0 f clock vdd vdd P L=0.7U W=3.5U AS=20.825P AD=7.044P PS=29.4U PD=9.275U
+
+* Spice Code nodes in cell cell 'hw5_2{lay}'
+vdd vdd 0 DC 1.8
+vss vss 0 DC 0
+vinclock clock 0 pulse(1.8 0 0 0 0 0.1ns 0.0000005ms)
+vinx x 0 DC 1.8
+vinz z 0 DC 1.8
+vinw w 0 DC 1.8
+viny y 0 pulse(1.8 0 0 0 0 0.1ns 0.000002ms)
+cload f vss 5pF
+.trans 0 7ns
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

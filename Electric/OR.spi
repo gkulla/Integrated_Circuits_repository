@@ -1,0 +1,25 @@
+*** SPICE deck for cell OR{sch} from library prova_library4_Nand_lay
+*** Created on Sat Dec 05, 2015 14:07:03
+*** Last revised on Sat Dec 05, 2015 14:13:26
+*** Written on Sat Dec 05, 2015 14:13:30 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: OR{sch}
+Mnmos@0 net@13 B gnd gnd n L=0.7U W=1.75U
+Mnmos@1 net@13 A gnd gnd n L=0.7U W=1.75U
+Mnmos@2 Out net@13 gnd gnd n L=0.7U W=1.75U
+Mpmos@0 vdd A net@1 vdd p L=0.7U W=3.5U
+Mpmos@1 net@1 B net@13 vdd p L=0.7U W=3.5U
+Mpmos@2 vdd net@13 Out vdd p L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell 'OR{sch}'
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VB B 0 DC 0
+VA A 0 DC 0
+.incude C:\Electric\MODEL_MOS.txt
+.tran 0 40n
+.END

@@ -1,0 +1,115 @@
+*** SPICE deck for cell 4bitAdder{sch} from library prova_library4_Nand_lay
+*** Created on Thu Nov 12, 2015 23:25:42
+*** Last revised on Sun Nov 22, 2015 20:45:28
+*** Written on Sun Nov 29, 2015 17:57:07 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT prova_library4_Nand_lay__3Input_OR FROM CELL prova_library4_Nand_lay:3Input_OR{sch}
+.SUBCKT prova_library4_Nand_lay__3Input_OR A AorBorC B C
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 net@0 A gnd gnd N L=0.4U W=1U
+Mnmos-4@1 net@0 B gnd gnd N L=0.4U W=1U
+Mnmos-4@2 net@0 C gnd gnd N L=0.4U W=1U
+Mnmos-4@3 AorBorC net@0 gnd gnd n L=0.4U W=1U
+Mpmos-4@0 net@0 C net@95 net@95 P L=0.4U W=2U
+Mpmos-4@1 net@95 B net@90 net@90 P L=0.4U W=2U
+Mpmos-4@2 net@90 A vdd vdd P L=0.4U W=2U
+Mpmos-4@3 AorBorC net@0 vdd vdd p L=0.4U W=2U
+.ENDS prova_library4_Nand_lay__3Input_OR
+
+*** SUBCIRCUIT prova_library4_Nand_lay__AND FROM CELL prova_library4_Nand_lay:AND{sch}
+.SUBCKT prova_library4_Nand_lay__AND A AANDB B
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 net@5 A net@105 net@105 N L=0.4U W=1U
+Mnmos-4@1 net@105 B gnd gnd N L=0.4U W=1U
+Mnmos-4@3 AANDB net@5 gnd gnd n L=0.4U W=1U
+Mpmos-4@0 net@5 B vdd vdd P L=0.4U W=2U
+Mpmos-4@1 net@5 A vdd vdd P L=0.4U W=2U
+Mpmos-4@2 AANDB net@5 vdd vdd p L=0.4U W=2U
+
+* Spice Code nodes in cell cell 'prova_library4_Nand_lay:AND{sch}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 0
+**VA A 0 DC 5
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__AND
+
+*** SUBCIRCUIT prova_library4_Nand_lay__XOR FROM CELL prova_library4_Nand_lay:XOR{sch}
+.SUBCKT prova_library4_Nand_lay__XOR A AXORB B
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 net@66 A gnd gnd n L=0.4U W=1U
+Mnmos-4@1 AXORB B net@66 net@66 n L=0.4U W=1U
+Mnmos-4@2 AXORB net@134 net@6 net@6 n L=0.4U W=1U
+Mnmos-4@3 net@6 net@125 gnd gnd n L=0.4U W=1U
+Mnmos-4@4 net@134 A gnd gnd n L=0.4U W=1U
+Mnmos-4@5 net@125 B gnd gnd n L=0.4U W=1U
+Mpmos-4@0 AXORB net@134 net@19 net@19 p L=0.4U W=2U
+Mpmos-4@1 net@19 B vdd vdd p L=0.4U W=2U
+Mpmos-4@2 net@24 A vdd vdd p L=0.4U W=2U
+Mpmos-4@3 AXORB net@125 net@24 net@24 p L=0.4U W=2U
+Mpmos-4@5 net@134 A vdd vdd p L=0.4U W=2U
+Mpmos-4@6 net@125 B vdd vdd p L=0.4U W=2U
+
+* Spice Code nodes in cell cell 'prova_library4_Nand_lay:XOR{sch}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 0
+**VA A 0 DC 5
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__XOR
+
+*** SUBCIRCUIT prova_library4_Nand_lay__1bitADDER FROM CELL prova_library4_Nand_lay:1bitADDER{sch}
+.SUBCKT prova_library4_Nand_lay__1bitADDER A B Cin Cout SUM
+** GLOBAL gnd
+** GLOBAL vdd
+X_3Input_O@0 net@40 Cout net@43 net@47 prova_library4_Nand_lay__3Input_OR
+XAND@0 A net@40 Cin prova_library4_Nand_lay__AND
+XAND@1 B net@43 Cin prova_library4_Nand_lay__AND
+XAND@2 A net@47 B prova_library4_Nand_lay__AND
+XXOR@0 A net@0 B prova_library4_Nand_lay__XOR
+XXOR@1 net@0 SUM Cin prova_library4_Nand_lay__XOR
+.ENDS prova_library4_Nand_lay__1bitADDER
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: prova_library4_Nand_lay:4bitAdder{sch}
+X_1bitADDE@0 A0 net@4 Cin net@2 S0 prova_library4_Nand_lay__1bitADDER
+X_1bitADDE@1 A1 net@5 net@2 net@1 S1 prova_library4_Nand_lay__1bitADDER
+X_1bitADDE@2 A2 net@6 net@1 net@63 S2 prova_library4_Nand_lay__1bitADDER
+X_1bitADDE@3 A3 net@7 net@63 net@96 S3 prova_library4_Nand_lay__1bitADDER
+X_1bitADDE@4 A4 net@67 net@96 net@82 S4 prova_library4_Nand_lay__1bitADDER
+X_1bitADDE@5 A5 net@66 net@82 net@88 S5 prova_library4_Nand_lay__1bitADDER
+XXOR@0 Cin net@4 B0 prova_library4_Nand_lay__XOR
+XXOR@1 Cin net@5 B1 prova_library4_Nand_lay__XOR
+XXOR@2 Cin net@6 B2 prova_library4_Nand_lay__XOR
+XXOR@3 Cin net@7 B3 prova_library4_Nand_lay__XOR
+XXOR@4 net@82 Overflow net@88 prova_library4_Nand_lay__XOR
+XXOR@5 Cin net@67 B4 prova_library4_Nand_lay__XOR
+XXOR@6 Cin net@66 B5 prova_library4_Nand_lay__XOR
+
+* Spice Code nodes in cell cell 'prova_library4_Nand_lay:4bitAdder{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+VB0 B0 0 DC 3.3
+VB1 B1 0 DC 0
+VB2 B2 0 DC 0
+VB3 B3 0 DC 0
+VB4 B4 0 DC 0
+VB5 B5 0 DC 0
+VA0 A0 0 DC 0
+VA1 A1 0 DC 0
+VA2 A2 0 DC 3.3
+VA3 A3 0 DC 0
+VA4 A4 0 DC 0
+VA5 A5 0 DC 0
+VCin Cin 0 DC 0
+.incude C:\Electric\MODEL_MOS.txt
+.tran 0 40n
+.END

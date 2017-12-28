@@ -1,0 +1,28 @@
+*** SPICE deck for cell 3input_andgate{sch} from library 3input_andgate
+*** Created on Wed Dec 02, 2015 20:58:14
+*** Last revised on Sat Dec 05, 2015 00:25:00
+*** Written on Sat Dec 05, 2015 00:25:04 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 3input_andgate:3input_andgate{sch}
+Mnmos@1 net@37 C gnd gnd N L=0.7U W=3.5U
+Mnmos@2 net@21 B net@37 gnd N L=0.7U W=3.5U
+Mnmos@3 net@0 A net@21 gnd N L=0.7U W=3.5U
+Mnmos@4 F net@0 gnd gnd N L=0.7U W=3.5U
+Mpmos@0 vdd A net@0 vdd P L=0.7U W=3.5U
+Mpmos@1 vdd B net@0 vdd P L=0.7U W=3.5U
+Mpmos@2 vdd C net@0 vdd P L=0.7U W=3.5U
+Mpmos@3 vdd net@0 F vdd P L=0.7U W=7U
+
+* Spice Code nodes in cell cell '3input_andgate:3input_andgate{sch}'
+.incude C:\Electric\MODEL_MOS.txt
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VC C 0 DC 5
+VB B 0 DC 0
+VA A 0 DC 0
+.tran 0 40n
+.END

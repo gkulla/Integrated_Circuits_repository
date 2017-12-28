@@ -1,0 +1,38 @@
+*** SPICE deck for cell complexlogic1{sch} from library inverter1
+*** Created on Wed Oct 28, 2015 23:16:28
+*** Last revised on Thu Oct 29, 2015 10:35:38
+*** Written on Thu Oct 29, 2015 13:00:27 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global 0 vdd
+
+*** TOP LEVEL CELL: complexlogic1{sch}
+Mnmos_0 net_161 C 0 0 N L=0.7U W=3.5U
+Mnmos_1 net_128 A 0 0 N L=0.7U W=3.5U
+Mnmos_2 F B net_19 0 N L=0.7U W=3.5U
+Mnmos_3 F net_161 net_19 0 N L=0.7U W=3.5U
+Mnmos_4 F C net_357 0 N L=0.7U W=3.5U
+Mnmos_5 net_357 net_213 0 0 N L=0.7U W=3.5U
+Mnmos_6 net_19 net_128 0 0 N L=0.7U W=3.5U
+Mnmos_7 net_19 B 0 0 N L=0.7U W=3.5U
+Mnmos_8 net_213 D 0 0 N L=0.7U W=3.5U
+Mpmos_0 net_62 C vdd vdd P L=0.7U W=3.5U
+Mpmos_1 net_62 net_213 vdd vdd P L=0.7U W=3.5U
+Mpmos_2 net_324 net_128 net_62 vdd P L=0.7U W=3.5U
+Mpmos_3 net_325 B net_62 vdd P L=0.7U W=3.5U
+Mpmos_4 F B net_324 vdd P L=0.7U W=3.5U
+Mpmos_5 F net_161 net_325 vdd P L=0.7U W=3.5U
+Mpmos_6 net_161 C vdd vdd P L=0.7U W=7U
+Mpmos_7 net_128 A vdd vdd P L=0.7U W=7U
+Mpmos_8 net_213 D vdd vdd P L=0.7U W=7U
+
+* Spice Code nodes in cell cell 'complexlogic1{sch}'
+vdd vdd 0 DC 1.8
+vinA A 0 DC 1.8
+vinB B 0 DC 0
+vinC C 0 pulse(1.8 0 0 40ns 20ns 0.3us 1us)
+vinD D 0 DC 0
+.trans 0 5us
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

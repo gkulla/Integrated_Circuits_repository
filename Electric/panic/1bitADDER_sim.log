@@ -1,0 +1,31 @@
+Circuit: *** SPICE deck for cell 1bitADDER_sim{sch} from library Indipendent_Study
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Jul 27 11:56:24 2017
+Total elapsed time: 0.550 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3108
+traniter = 3065
+tranpoints = 1273
+accept = 1195
+rejected = 78
+matrix size = 35
+fillins = 8
+solver = Normal
+Thread vector: 114.6/66.2[4] 21.3/7.9[4] 4.1/1.9[4] 0.6/5.1[1]  2592/500
+Matrix Compiler1: 3.69 KB object code size  2.8/1.5/[0.5]
+Matrix Compiler2: 4.31 KB object code size  1.0/2.0/[0.8]
+

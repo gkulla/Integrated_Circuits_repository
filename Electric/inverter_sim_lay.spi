@@ -1,0 +1,23 @@
+*** SPICE deck for cell inverter_sim_lay{lay} from library EE4570_3
+*** Created on Mon Sep 21, 2015 22:41:07
+*** Last revised on Mon Sep 21, 2015 23:29:34
+*** Written on Mon Sep 21, 2015 23:33:01 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT EE4570_3__inverter FROM CELL inverter{lay}
+.SUBCKT EE4570_3__inverter gnd In Out vdd
+Mnmos@0 gnd In net@5 gnd NMOS L=0.4U W=0.8U AS=1.9P AD=6P PS=5.6U PD=16.2U
+Mpmos@0 vdd In net@5 vdd PMOS L=0.4U W=1.6U AS=1.9P AD=7P PS=5.6U PD=17.4U
+.ENDS EE4570_3__inverter
+
+*** TOP LEVEL CELL: inverter_sim_lay{lay}
+Xinverter@0 net@2 net@1 net@3 net@0 EE4570_3__inverter
+
+* Spice Code nodes in cell cell 'inverter_sim_lay{lay}'
+VDD VDD 0 DC 1.8
+VGND GND 0 DC 0
+VIN In 0 PULSE(1.8 0 0 100p 100p 10n 20n)
+.TRAN 0 50n
+.include C:\Electric\C5_models.txt
+.END

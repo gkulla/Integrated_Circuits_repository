@@ -1,0 +1,28 @@
+Circuit: *** SPICE deck for cell XOR_nanad{lay} from library prova_library4_Nand_lay
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Direct Newton iteration for .op point succeeded.
+
+Date: Tue Nov 24 21:29:05 2015
+Total elapsed time: 0.240 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2129
+traniter = 2082
+tranpoints = 1042
+accept = 1042
+rejected = 0
+matrix size = 18
+fillins = 6
+solver = Normal
+Thread vector: 49.1/36.1[2] 8.9/5.9[2] 1.4/3.0[1] 0.2/2.1[1]  2592/500
+Matrix Compiler1: 2.06 KB object code size  1.1/0.6/[0.2]
+Matrix Compiler2: off  [0.4]/0.6/0.9
+
+

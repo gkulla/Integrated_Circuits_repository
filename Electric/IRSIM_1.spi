@@ -1,0 +1,21 @@
+*** SPICE deck for cell IRSIM_1{sch} from library prova_library2_IRSIM
+*** Created on Sat Oct 03, 2015 12:40:08
+*** Last revised on Sat Oct 03, 2015 13:55:03
+*** Written on Sat Oct 03, 2015 13:55:09 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT prova_library2_IRSIM__inverter FROM CELL inverter{sch}
+.SUBCKT prova_library2_IRSIM__inverter In Out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 Out In gnd gnd n L=0.4U W=0.8U
+Mpmos-4@0 Out In vdd vdd p L=0.4U W=1.6U
+.ENDS prova_library2_IRSIM__inverter
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: IRSIM_1{sch}
+Ccap@0 gnd Out 10f
+Xinverter@0 In Out prova_library2_IRSIM__inverter
+.END

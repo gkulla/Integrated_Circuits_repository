@@ -1,0 +1,7 @@
+| units: 35.0 tech: mocmos format: SU
+| IRSIM file for cell inverter{sch} from library inverter1
+| Created on Wed Oct 07, 2015 16:18:10
+| Last revised on Fri Oct 16, 2015 23:40:23
+| Written on Sun Oct 25, 2015 22:45:07 by Electric VLSI Design System, version 9.06
+n input gnd output 2 10 17.5 11 g=S_gnd s=A_10,P_22 d=A_10,P_22
+p input output Vdd 2 20 17.5 18 g=S_vdd s=A_20,P_42 d=A_20,P_42

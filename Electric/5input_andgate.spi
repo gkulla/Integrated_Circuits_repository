@@ -1,0 +1,34 @@
+*** SPICE deck for cell 5input_andgate{sch} from library 4input_andgate
+*** Created on Sun Dec 06, 2015 09:22:01
+*** Last revised on Sun Dec 06, 2015 09:30:45
+*** Written on Sun Dec 06, 2015 09:30:50 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 5input_andgate{sch}
+Mnmos@0 net@6 D net@50 gnd N L=0.7U W=1.75U
+Mnmos@1 net@46 C net@6 gnd N L=0.7U W=1.75U
+Mnmos@2 net@19 B net@46 gnd N L=0.7U W=1.75U
+Mnmos@3 net@0 A net@19 gnd N L=0.7U W=1.75U
+Mnmos@4 F net@0 gnd gnd N L=0.7U W=1.75U
+Mnmos@5 net@50 E gnd gnd N L=0.7U W=1.75U
+Mpmos@0 vdd A net@0 vdd P L=0.7U W=3.5U
+Mpmos@1 vdd B net@0 vdd P L=0.7U W=3.5U
+Mpmos@2 vdd C net@0 vdd P L=0.7U W=3.5U
+Mpmos@3 vdd D net@0 vdd P L=0.7U W=3.5U
+Mpmos@4 vdd net@0 F vdd P L=0.7U W=3.5U
+Mpmos@5 vdd E net@0 vdd P L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell '5input_andgate{sch}'
+.incude C:\Electric\MODEL_MOS.txt
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VC C 0 DC 5
+VB B 0 DC 5
+VA A 0 DC 5
+VD D 0 DC 5
+VE E 0 DC 5
+.tran 0 40n
+.END

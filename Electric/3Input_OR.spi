@@ -1,0 +1,26 @@
+*** SPICE deck for cell 3Input_OR{lay} from library prova_library4_Nand_lay
+*** Created on Fri Nov 13, 2015 21:53:38
+*** Last revised on Fri Nov 13, 2015 22:17:05
+*** Written on Fri Nov 13, 2015 22:17:17 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: prova_library4_Nand_lay:3Input_OR{lay}
+Mnmos@0 net@8 A gnd gnd n L=0.4U W=1U AS=4.725P AD=1.65P PS=11.45U PD=4.55U
+Mnmos@1 gnd B net@8 gnd n L=0.4U W=1U AS=1.65P AD=4.725P PS=4.55U PD=11.45U
+Mnmos@2 net@8 C gnd gnd n L=0.4U W=1U AS=4.725P AD=1.65P PS=11.45U PD=4.55U
+Mnmos@4 OUT net@8 gnd gnd n L=0.4U W=1U AS=4.725P AD=2.2P PS=11.45U PD=5.9U
+Mpmos@0 vdd A net@19 vdd p L=0.4U W=2U AS=1.1P AD=8.9P PS=3.1U PD=19.9U
+Mpmos@1 net@19 B net@62 vdd p L=0.4U W=2U AS=1P AD=1.1P PS=3U PD=3.1U
+Mpmos@2 net@62 C net@8 vdd p L=0.4U W=2U AS=1.65P AD=1P PS=4.55U PD=3U
+Mpmos@4 OUT net@8 vdd vdd p L=0.4U W=2U AS=8.9P AD=2.2P PS=19.9U PD=5.9U
+
+* Spice Code nodes in cell cell 'prova_library4_Nand_lay:3Input_OR{lay}'
+.incude C:\Electric\MODEL_MOS.txt
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VB B 0 DC 0
+VA A 0 DC 0
+VC C 0 DC 0
+.tran 0 40n
+.END

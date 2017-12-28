@@ -1,0 +1,70 @@
+*** SPICE deck for cell Tri_State_Buffer{sch} from library prova_library4_Nand_lay
+*** Created on Sat Dec 05, 2015 11:58:03
+*** Last revised on Sat Dec 05, 2015 12:13:54
+*** Written on Sat Dec 05, 2015 12:13:57 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT prova_library4_Nand_lay__AND FROM CELL AND{sch}
+.SUBCKT prova_library4_Nand_lay__AND A AANDB B
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@128 B gnd gnd n L=0.7U W=1.75U
+Mnmos@1 net@21 A net@128 gnd n L=0.7U W=1.75U
+Mnmos@2 AANDB net@21 gnd gnd n L=0.7U W=1.75U
+Mpmos@0 vdd net@21 AANDB vdd p L=0.7U W=3.5U
+Mpmos@1 vdd A net@21 vdd p L=0.7U W=3.5U
+Mpmos@2 vdd B net@21 vdd p L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell 'AND{sch}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 0
+**VA A 0 DC 5
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__AND
+
+*** SUBCIRCUIT prova_library4_Nand_lay__NAND_2 FROM CELL NAND_2{sch}
+.SUBCKT prova_library4_Nand_lay__NAND_2 A AnandB B
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 AnandB A net@12 net@12 N L=0.7U W=1.4U
+Mnmos-4@1 net@12 B gnd gnd N L=0.7U W=1.4U
+Mpmos-4@0 AnandB B vdd vdd P L=0.7U W=2.8U
+Mpmos-4@1 AnandB A vdd vdd P L=0.7U W=2.8U
+
+* Spice Code nodes in cell cell 'NAND_2{sch}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 5
+**VA A 0 DC 5
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__NAND_2
+
+*** SUBCIRCUIT prova_library4_Nand_lay__inverter FROM CELL inverter{sch}
+.SUBCKT prova_library4_Nand_lay__inverter In Out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 Out In gnd gnd n L=0.7U W=1.4U
+Mpmos-4@0 Out In vdd vdd p L=0.7U W=2.8U
+.ENDS prova_library4_Nand_lay__inverter
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Tri_State_Buffer{sch}
+Mnmos-4@0 Output net@14 gnd gnd n L=0.7U W=1.75U
+Mpmos-4@0 Output net@17 vdd vdd p L=0.7U W=3.5U
+XAND@0 Enable net@14 net@45 prova_library4_Nand_lay__AND
+XNAND_2@0 Enable net@17 Input prova_library4_Nand_lay__NAND_2
+Xinverter@0 Input net@45 prova_library4_Nand_lay__inverter
+
+* Spice Code nodes in cell cell 'Tri_State_Buffer{sch}'
+.incude C:\Electric\MODEL_MOS.txt
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VEnable Enable 0 DC 5
+VInput Input 0 DC 0
+.tran 0 40n
+.END

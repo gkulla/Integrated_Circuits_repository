@@ -1,0 +1,104 @@
+*** SPICE deck for cell 1bitADDER{lay} from library prova_library4_Nand_lay
+*** Created on Fri Nov 13, 2015 20:31:39
+*** Last revised on Sun Nov 15, 2015 13:56:55
+*** Written on Sun Nov 15, 2015 13:57:06 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: 1bitADDER{lay}
+Mnmos@0 gnd Cin net@0 gnd n L=0.4U W=1U AS=0.5P AD=6.564P PS=2U PD=16.568U
+Mnmos@1 net@0 net@1 net@14 gnd n L=0.4U W=1U AS=2.367P AD=0.5P PS=6.2U PD=2U
+Mnmos@2 gnd net@14 net@22 gnd n L=0.4U W=1U AS=2.1P AD=6.564P PS=5.8U PD=16.568U
+Mnmos@3 gnd A net@47 gnd n L=0.4U W=1U AS=0.5P AD=6.564P PS=2U PD=16.568U
+Mnmos@4 net@47 net@1 net@61 gnd n L=0.4U W=1U AS=2.367P AD=0.5P PS=6.2U PD=2U
+Mnmos@5 gnd net@61 net@69 gnd n L=0.4U W=1U AS=2.1P AD=6.564P PS=5.8U PD=16.568U
+Mnmos@6 gnd Cin net@94 gnd n L=0.4U W=1U AS=0.5P AD=6.564P PS=2U PD=16.568U
+Mnmos@7 net@94 A net@108 gnd n L=0.4U W=1U AS=2.367P AD=0.5P PS=6.2U PD=2U
+Mnmos@8 gnd net@108 net@116 gnd n L=0.4U W=1U AS=2.1P AD=6.564P PS=5.8U PD=16.568U
+Mnmos@13 net@202 net@69 gnd gnd n L=0.4U W=1U AS=6.564P AD=1.65P PS=16.568U PD=4.55U
+Mnmos@14 gnd net@116 net@202 gnd n L=0.4U W=1U AS=1.65P AD=6.564P PS=4.55U PD=16.568U
+Mnmos@15 net@202 net@22 gnd gnd n L=0.4U W=1U AS=6.564P AD=1.65P PS=16.568U PD=4.55U
+Mnmos@16 Cout net@202 gnd gnd n L=0.4U W=1U AS=6.564P AD=2.2P PS=16.568U PD=5.9U
+Mnmos@29 gnd A net@742 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@30 net@742 A net@601 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@31 gnd net@1 net@678 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@32 net@678 net@1 net@600 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@33 gnd net@1 net@708 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@34 net@708 net@601 net@626 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@35 gnd net@600 net@741 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@36 net@741 A net@623 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@37 gnd net@623 net@778 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@38 net@778 net@626 net@780 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@39 gnd net@780 net@953 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@40 net@953 net@780 net@812 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@41 gnd Cin net@889 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@42 net@889 Cin net@811 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@43 gnd Cin net@919 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@44 net@919 net@812 net@837 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@45 gnd net@811 net@952 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@46 net@952 net@780 net@834 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@47 gnd net@834 net@989 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@48 net@989 net@837 SUM gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@49 gnd B net@1080 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@50 net@1080 B net@1093 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@51 gnd Cin net@1227 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@52 net@1227 Cin net@1085 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@53 gnd Cin net@1257 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@54 net@1257 net@1093 net@1121 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@55 gnd net@1085 net@1290 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@56 net@1290 B net@1084 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mnmos@57 gnd net@1084 net@1116 gnd n L=0.4U W=1U AS=0.45P AD=6.564P PS=1.9U PD=16.568U
+Mnmos@58 net@1116 net@1121 net@1 gnd n L=0.4U W=1U AS=2.433P AD=0.45P PS=6.267U PD=1.9U
+Mpmos@0 net@14 Cin vdd vdd p L=0.4U W=2U AS=5.439P AD=2.367P PS=12.005U PD=6.2U
+Mpmos@1 vdd net@1 net@14 vdd p L=0.4U W=2U AS=2.367P AD=5.439P PS=6.2U PD=12.005U
+Mpmos@2 vdd net@14 net@22 vdd p L=0.4U W=2U AS=2.1P AD=5.439P PS=5.8U PD=12.005U
+Mpmos@3 net@61 A vdd vdd p L=0.4U W=2U AS=5.439P AD=2.367P PS=12.005U PD=6.2U
+Mpmos@4 vdd net@1 net@61 vdd p L=0.4U W=2U AS=2.367P AD=5.439P PS=6.2U PD=12.005U
+Mpmos@5 vdd net@61 net@69 vdd p L=0.4U W=2U AS=2.1P AD=5.439P PS=5.8U PD=12.005U
+Mpmos@6 net@108 Cin vdd vdd p L=0.4U W=2U AS=5.439P AD=2.367P PS=12.005U PD=6.2U
+Mpmos@7 vdd A net@108 vdd p L=0.4U W=2U AS=2.367P AD=5.439P PS=6.2U PD=12.005U
+Mpmos@8 vdd net@108 net@116 vdd p L=0.4U W=2U AS=2.1P AD=5.439P PS=5.8U PD=12.005U
+Mpmos@13 vdd net@69 net@224 vdd p L=0.4U W=2U AS=1.1P AD=5.439P PS=3.1U PD=12.005U
+Mpmos@14 net@224 net@116 net@238 vdd p L=0.4U W=2U AS=1P AD=1.1P PS=3U PD=3.1U
+Mpmos@15 net@238 net@22 net@202 vdd p L=0.4U W=2U AS=1.65P AD=1P PS=4.55U PD=3U
+Mpmos@16 Cout net@202 vdd vdd p L=0.4U W=2U AS=5.439P AD=2.2P PS=12.005U PD=5.9U
+Mpmos@29 net@601 A vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@30 vdd A net@601 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@31 net@600 net@1 vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@32 vdd net@1 net@600 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@33 net@626 net@1 vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@34 vdd net@601 net@626 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@35 net@623 net@600 vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@36 vdd A net@623 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@37 net@780 net@623 vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@38 vdd net@626 net@780 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@39 net@812 net@780 vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@40 vdd net@780 net@812 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@41 net@811 Cin vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@42 vdd Cin net@811 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@43 net@837 Cin vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@44 vdd net@812 net@837 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@45 net@834 net@811 vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@46 vdd net@780 net@834 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@47 SUM net@834 vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@48 vdd net@837 SUM vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@49 net@1093 B vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@50 vdd B net@1093 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@51 net@1085 Cin vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@52 vdd Cin net@1085 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@53 net@1121 Cin vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@54 vdd net@1093 net@1121 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@55 net@1084 net@1085 vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@56 vdd B net@1084 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+Mpmos@57 net@1 net@1084 vdd vdd p L=0.4U W=2U AS=5.439P AD=2.433P PS=12.005U PD=6.267U
+Mpmos@58 vdd net@1121 net@1 vdd p L=0.4U W=2U AS=2.433P AD=5.439P PS=6.267U PD=12.005U
+
+* Spice Code nodes in cell cell '1bitADDER{lay}'
+.incude C:\Electric\MODEL_MOS.txt
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VB B 0 DC 5
+VA A 0 DC 0
+VCin Cin 0 DC 0
+.tran 0 40n
+.END

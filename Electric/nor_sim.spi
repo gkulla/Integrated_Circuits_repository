@@ -1,0 +1,29 @@
+*** SPICE deck for cell nor_sim{sch} from library nor_gate
+*** Created on Mon Nov 23, 2015 01:20:01
+*** Last revised on Mon Nov 23, 2015 01:21:47
+*** Written on Mon Nov 23, 2015 01:21:58 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT nor_gate__nor_gate FROM CELL nor_gate:nor_gate{sch}
+.SUBCKT nor_gate__nor_gate A B F vdd
+** GLOBAL 0
+** GLOBAL vdd
+Mnmos-4_0 F A 0 0 N L=0.7U W=3.5U
+Mnmos-4_1 F B 0 0 N L=0.7U W=3.5U
+Mpmos-4_0 vdd A net_0 vdd P L=0.7U W=3.5U
+Mpmos-4_1 net_0 B F vdd P L=0.7U W=3.5U
+.ENDS nor_gate__nor_gate
+
+.global 0 vdd
+
+*** TOP LEVEL CELL: nor_gate:nor_sim{sch}
+Xnor_gate_0 A B F vdd nor_gate__nor_gate
+
+* Spice Code nodes in cell cell 'nor_gate:nor_sim{sch}'
+vdd vdd 0 DC 3.3
+vinA A 0 pwl(0 0 1ns 0 2ns 3.3 3ns 3.3)
+vinB B 0 pwl(0 0 1ns 3.3 2ns 0 3ns 3.3)
+.trans 0  3ns
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

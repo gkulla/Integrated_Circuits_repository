@@ -1,0 +1,35 @@
+# header information:
+Hinverter|9.07
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tbicmos|ScaleFORbicmos()D350.0
+Tmocmos|ScaleFORmocmos()D350.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+Tmocmossub|ScaleFORmocmossub()D350.0
+
+# Cell inverter;1{sch}
+Cinverter;1{sch}||schematic|1444188187684|1497902680992|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||30|46||||
+NOff-Page|conn@1||51|46||||
+NGround|gnd@0||42|32||||
+N4-Port-Transistor|nmos-4@0||40|40|||R||ATTR_length(D5G1;OLX0.5;Y-3;)S2.0|ATTR_width(D5G1;OLX2;Y-3;)S10|SIM_spice_model(D5G1;X-1;Y-3;)SN
+NWire_Pin|pin@4||42|46||||
+NWire_Pin|pin@5||39|46||||
+Ngeneric:Invisible-Pin|pin@6||27|36|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,vin in 0 DC 0,.dc vin 0 5 1m,".include C:Electric\\C5_models.txt"]
+N4-Port-Transistor|pmos-4@0||40|52|||YR|2|ATTR_length(D5G1;OLX-2;Y-3;)S2.0|ATTR_width(D5G1;OLX-0.5;Y-3;)S20|SIM_spice_model(D5G1;X1;Y-3;)SP
+NPower|pwr@0||42|60||||
+Awire|net@11|||2700|nmos-4@0|d|42|42|pin@4||42|46
+Awire|net@12|||2700|pin@4||42|46|pmos-4@0|d|42|50
+Awire|net@13|||0|conn@1|a|49|46|pin@4||42|46
+Awire|net@15|||900|pmos-4@0|g|39|52|pin@5||39|46
+Awire|net@16|||900|pin@5||39|46|nmos-4@0|g|39|40
+Awire|net@17|||1800|conn@0|y|32|46|pin@5||39|46
+Awire|net@18|||2700|pmos-4@0|b|42|53|pwr@0||42|60
+Awire|net@19|||900|nmos-4@0|b|42|39|gnd@0||42|34
+Ein||D5G2;|conn@0|a|U
+Eout||D5G2;|conn@1|y|U
+Evdd||D5G2;X3.5;|pwr@0||P
+X

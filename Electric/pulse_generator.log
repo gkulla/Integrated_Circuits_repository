@@ -1,0 +1,25 @@
+Circuit: *** SPICE deck for cell pulse_generator{sch} from library prova_library2_IRSIM
+
+Limiting rise time of source vpulse@2 to 5e-010
+Limiting fall time of source vpulse@2 to 5e-010
+WARNING: Less than two connections to node PULSE@2_PLUS.  This node is used by VPULSE@2.
+.OP point found by inspection.
+
+Date: Wed Nov 04 18:26:27 2015
+Total elapsed time: 0.094 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2238
+traniter = 2238
+tranpoints = 1120
+accept = 1101
+rejected = 19
+matrix size = 2
+fillins = 0
+solver = Normal
+Matrix Compiler1: 18 bytes object code size  0.1/0.0/[0.0]
+Matrix Compiler2: off  [0.0]/0.1/0.0
+
+

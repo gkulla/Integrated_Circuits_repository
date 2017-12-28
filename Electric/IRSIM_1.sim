@@ -1,0 +1,8 @@
+| units: 20.0 tech: mocmos format: SU
+| IRSIM file for cell IRSIM_1{sch} from library prova_library2_IRSIM
+| Created on Sat Oct 03, 2015 12:40:08
+| Last revised on Sat Oct 03, 2015 12:44:01
+| Written on Sat Oct 03, 2015 12:48:04 by Electric VLSI Design System, version 9.06
+C Out gnd 100.0
+n In gnd Out 2 4 -4 -5 g=S_gnd s=A_4,P_10 d=A_4,P_10
+p In vdd Out 2 8 -4 6 g=S_vdd s=A_8,P_18 d=A_8,P_18

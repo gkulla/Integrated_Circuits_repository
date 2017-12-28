@@ -1,0 +1,94 @@
+*** SPICE deck for cell 1bitADDER_sim{sch} from library Indipendent_Study
+*** Created on Thu Jul 27, 2017 11:36:13
+*** Last revised on Thu Jul 27, 2017 11:56:17
+*** Written on Thu Jul 27, 2017 11:56:23 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT prova_library4_Nand_lay__3Input_OR FROM CELL prova_library4_Nand_lay:3Input_OR{sch}
+.SUBCKT prova_library4_Nand_lay__3Input_OR A AorBorC B C
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 net@0 A gnd gnd N L=0.6U W=1.5U
+Mnmos-4@1 net@0 B gnd gnd N L=0.6U W=1.5U
+Mnmos-4@2 net@0 C gnd gnd N L=0.6U W=1.5U
+Mnmos-4@3 AorBorC net@0 gnd gnd n L=0.6U W=1.5U
+Mpmos-4@0 net@0 C net@95 net@95 P L=0.6U W=3U
+Mpmos-4@1 net@95 B net@90 net@90 P L=0.6U W=3U
+Mpmos-4@2 net@90 A vdd vdd P L=0.6U W=3U
+Mpmos-4@3 AorBorC net@0 vdd vdd p L=0.6U W=3U
+.ENDS prova_library4_Nand_lay__3Input_OR
+
+*** SUBCIRCUIT prova_library4_Nand_lay__AND FROM CELL prova_library4_Nand_lay:AND{sch}
+.SUBCKT prova_library4_Nand_lay__AND A AANDB B
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@128 B gnd gnd n L=0.6U W=1.5U
+Mnmos@1 net@21 A net@128 gnd n L=0.6U W=1.5U
+Mnmos@2 AANDB net@21 gnd gnd n L=0.6U W=1.5U
+Mpmos@0 vdd net@21 AANDB vdd p L=0.6U W=3U
+Mpmos@1 vdd A net@21 vdd p L=0.6U W=3U
+Mpmos@2 vdd B net@21 vdd p L=0.6U W=3U
+
+* Spice Code nodes in cell cell 'prova_library4_Nand_lay:AND{sch}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 0
+**VA A 0 DC 5
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__AND
+
+*** SUBCIRCUIT prova_library4_Nand_lay__XOR FROM CELL prova_library4_Nand_lay:XOR{sch}
+.SUBCKT prova_library4_Nand_lay__XOR A AXORB B
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 net@66 A gnd gnd n L=0.6U W=1.5U
+Mnmos-4@1 AXORB B net@66 net@66 n L=0.6U W=1.5U
+Mnmos-4@2 AXORB net@134 net@6 net@6 n L=0.6U W=1.5U
+Mnmos-4@3 net@6 net@125 gnd gnd n L=0.6U W=1.5U
+Mnmos-4@4 net@134 A gnd gnd n L=0.6U W=1.5U
+Mnmos-4@5 net@125 B gnd gnd n L=0.6U W=1.5U
+Mpmos-4@0 AXORB net@134 net@19 net@19 p L=0.6U W=3U
+Mpmos-4@1 net@19 B vdd vdd p L=0.6U W=3U
+Mpmos-4@2 net@24 A vdd vdd p L=0.6U W=3U
+Mpmos-4@3 AXORB net@125 net@24 net@24 p L=0.6U W=3U
+Mpmos-4@5 net@134 A vdd vdd p L=0.6U W=3U
+Mpmos-4@6 net@125 B vdd vdd p L=0.6U W=3U
+
+* Spice Code nodes in cell cell 'prova_library4_Nand_lay:XOR{sch}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 0
+**VA A 0 DC 5
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__XOR
+
+*** SUBCIRCUIT Indipendent_Study__1bitADDER FROM CELL 1bitADDER{sch}
+.SUBCKT Indipendent_Study__1bitADDER A B Cin Cout SUM
+** GLOBAL gnd
+** GLOBAL vdd
+X_3Input_O@0 net@40 Cout net@43 net@47 prova_library4_Nand_lay__3Input_OR
+XAND@0 A net@40 Cin prova_library4_Nand_lay__AND
+XAND@1 B net@43 Cin prova_library4_Nand_lay__AND
+XAND@2 A net@47 B prova_library4_Nand_lay__AND
+XXOR@0 A net@0 B prova_library4_Nand_lay__XOR
+XXOR@1 net@0 SUM Cin prova_library4_Nand_lay__XOR
+.ENDS Indipendent_Study__1bitADDER
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 1bitADDER_sim{sch}
+X_1bitADDE@0 B A Cin Cout SUM Indipendent_Study__1bitADDER
+
+* Spice Code nodes in cell cell '1bitADDER_sim{sch}'
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VA A 0 DC 5
+VB B 0 DC 0
+**VCin Cin 0 DC 0
+VCin Cin 0 Pulse(5 0 0 100p 100p 10n 20n)
+.tran 0 50n
+.include C:\Electric\panic\C5_models.txt
+.END

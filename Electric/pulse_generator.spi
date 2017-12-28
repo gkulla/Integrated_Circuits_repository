@@ -1,0 +1,17 @@
+*** SPICE deck for cell pulse_generator{sch} from library prova_library2_IRSIM
+*** Created on Wed Nov 04, 2015 16:59:43
+*** Last revised on Wed Nov 04, 2015 18:22:06
+*** Written on Wed Nov 04, 2015 18:26:27 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd
+
+*** TOP LEVEL CELL: pulse_generator{sch}
+VPulse@2 Pulse@2_plus gnd DC=1V pulse 0 3V 5ns 0 0 5ns 15ns
+
+* Spice Code nodes in cell cell 'pulse_generator{sch}'
+**PULSE(-1 3 1m 1.5m 2m)
+**PWL REPEAT FOR 5 (0 0 1m 1 2m 1 3m 0) ENDREPEAT
+.tran 45n
+.END

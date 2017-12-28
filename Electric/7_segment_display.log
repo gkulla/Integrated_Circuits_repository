@@ -1,0 +1,9 @@
+Circuit: *** SPICE deck for cell 7_segment_display{lay} from library prova_library4_Nand_lay
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 5.37109e-016 to 3.9063e-011

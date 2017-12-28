@@ -1,0 +1,28 @@
+*** SPICE deck for cell 3Input_AND{sch} from library prova_library4_Nand_lay
+*** Created on Wed Dec 02, 2015 18:17:24
+*** Last revised on Sat Dec 05, 2015 09:44:59
+*** Written on Sat Dec 05, 2015 09:45:04 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: prova_library4_Nand_lay:3Input_AND{sch}
+Mnmos@0 net@101 C gnd gnd n L=0.7U W=3.5U
+Mnmos@1 net@141 B net@101 gnd n L=0.7U W=3.5U
+Mnmos@2 net@75 A net@141 gnd n L=0.7U W=3.5U
+Mnmos@3 Out net@75 gnd gnd n L=0.7U W=1.75U
+Mnmos@4 vdd B net@75 vdd p L=0.7U W=3.5U
+Mpmos@0 vdd A net@75 vdd p L=0.7U W=3.5U
+Mpmos@1 vdd C net@75 vdd p L=0.7U W=3.5U
+Mpmos@2 vdd net@75 Out vdd p L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell 'prova_library4_Nand_lay:3Input_AND{sch}'
+.incude C:\Electric\MODEL_MOS.txt
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VC C 0 DC 0
+VB B 0 DC 0
+VA A 0 DC 0
+.tran 0 40n
+.END

@@ -1,0 +1,8 @@
+Circuit: *** SPICE deck for cell 4bitAdder{sch} from library Indipendent_Study
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Fatal Error: Missing model name in CPL statement: "p:padref@4:mos-vth-4@1 vdd«:vdd» vdd«:vdd» a5«:in» vdd«:vdd» padref@4:area=1.8p "

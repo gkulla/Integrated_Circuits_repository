@@ -1,0 +1,267 @@
+*** SPICE deck for cell 4_input_ADD_SUB{sch} from library prova_library4_Nand_lay
+*** Created on Sun Dec 06, 2015 13:01:57
+*** Last revised on Sun Dec 06, 2015 14:00:19
+*** Written on Sun Dec 06, 2015 14:00:23 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT prova_library4_Nand_lay__3Input_AND FROM CELL 3Input_AND{sch}
+.SUBCKT prova_library4_Nand_lay__3Input_AND A B C Out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@101 C gnd gnd n L=0.7U W=3.5U
+Mnmos@1 net@141 B net@101 gnd n L=0.7U W=3.5U
+Mnmos@2 net@75 A net@141 gnd n L=0.7U W=3.5U
+Mnmos@3 Out net@75 gnd gnd n L=0.7U W=1.75U
+Mnmos@4 vdd B net@75 vdd p L=0.7U W=3.5U
+Mpmos@0 vdd A net@75 vdd p L=0.7U W=3.5U
+Mpmos@1 vdd C net@75 vdd p L=0.7U W=3.5U
+Mpmos@2 vdd net@75 Out vdd p L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell '3Input_AND{sch}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VC C 0 DC 0
+**VB B 0 DC 0
+**VA A 0 DC 0
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__3Input_AND
+
+*** SUBCIRCUIT prova_library4_Nand_lay__3Input_OR FROM CELL 3Input_OR{sch}
+.SUBCKT prova_library4_Nand_lay__3Input_OR A AorBorC B C
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 net@0 A gnd gnd N L=0.7U W=1.75U
+Mnmos-4@1 net@0 B gnd gnd N L=0.7U W=1.75U
+Mnmos-4@2 net@0 C gnd gnd N L=0.7U W=1.75U
+Mnmos-4@3 AorBorC net@0 gnd gnd n L=0.7U W=1.75U
+Mpmos-4@0 net@0 C net@95 net@95 P L=0.7U W=3.5U
+Mpmos-4@1 net@95 B net@90 net@90 P L=0.7U W=3.5U
+Mpmos-4@2 net@90 A vdd vdd P L=0.7U W=3.5U
+Mpmos-4@3 AorBorC net@0 vdd vdd p L=0.7U W=3.5U
+.ENDS prova_library4_Nand_lay__3Input_OR
+
+*** SUBCIRCUIT _4input_andgate__4input_andgate FROM CELL 4input_andgate:4input_andgate{sch}
+.SUBCKT _4input_andgate__4input_andgate A B C D F vdd
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@3 D gnd gnd N L=0.7U W=3.5U
+Mnmos@1 net@2 C net@3 gnd N L=0.7U W=3.5U
+Mnmos@2 net@5 B net@2 gnd N L=0.7U W=3.5U
+Mnmos@3 net@7 A net@5 gnd N L=0.7U W=3.5U
+Mnmos@4 F net@7 gnd gnd N L=0.7U W=3.5U
+Mpmos@0 vdd A net@7 vdd P L=0.7U W=3.5U
+Mpmos@1 vdd B net@7 vdd P L=0.7U W=3.5U
+Mpmos@2 vdd C net@7 vdd P L=0.7U W=3.5U
+Mpmos@3 vdd D net@7 vdd P L=0.7U W=3.5U
+Mpmos@4 vdd net@7 F vdd P L=0.7U W=7U
+.ENDS _4input_andgate__4input_andgate
+
+*** SUBCIRCUIT _4input_andgate__5input_andgate FROM CELL 4input_andgate:5input_andgate{sch}
+.SUBCKT _4input_andgate__5input_andgate A B C D E F
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@6 D net@50 gnd N L=0.7U W=1.75U
+Mnmos@1 net@46 C net@6 gnd N L=0.7U W=1.75U
+Mnmos@2 net@19 B net@46 gnd N L=0.7U W=1.75U
+Mnmos@3 net@0 A net@19 gnd N L=0.7U W=1.75U
+Mnmos@4 F net@0 gnd gnd N L=0.7U W=1.75U
+Mnmos@5 net@50 E gnd gnd N L=0.7U W=1.75U
+Mpmos@0 vdd A net@0 vdd P L=0.7U W=3.5U
+Mpmos@1 vdd B net@0 vdd P L=0.7U W=3.5U
+Mpmos@2 vdd C net@0 vdd P L=0.7U W=3.5U
+Mpmos@3 vdd D net@0 vdd P L=0.7U W=3.5U
+Mpmos@4 vdd net@0 F vdd P L=0.7U W=3.5U
+Mpmos@5 vdd E net@0 vdd P L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell '4input_andgate:5input_andgate{sch}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VC C 0 DC 5
+**VB B 0 DC 5
+**VA A 0 DC 5
+**VD D 0 DC 5
+**VE E 0 DC 5
+**.tran 0 40n
+.ENDS _4input_andgate__5input_andgate
+
+*** SUBCIRCUIT prova_library4_Nand_lay__AND FROM CELL AND{sch}
+.SUBCKT prova_library4_Nand_lay__AND A AANDB B
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@128 B gnd gnd n L=0.7U W=1.75U
+Mnmos@1 net@21 A net@128 gnd n L=0.7U W=1.75U
+Mnmos@2 AANDB net@21 gnd gnd n L=0.7U W=1.75U
+Mpmos@0 vdd net@21 AANDB vdd p L=0.7U W=3.5U
+Mpmos@1 vdd A net@21 vdd p L=0.7U W=3.5U
+Mpmos@2 vdd B net@21 vdd p L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell 'AND{sch}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 0
+**VA A 0 DC 5
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__AND
+
+*** SUBCIRCUIT prova_library4_Nand_lay__OR FROM CELL OR{sch}
+.SUBCKT prova_library4_Nand_lay__OR A B Out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@13 B gnd gnd n L=0.7U W=1.75U
+Mnmos@1 net@13 A gnd gnd n L=0.7U W=1.75U
+Mnmos@2 Out net@13 gnd gnd n L=0.7U W=1.75U
+Mpmos@0 vdd A net@1 vdd p L=0.7U W=3.5U
+Mpmos@1 net@1 B net@13 vdd p L=0.7U W=3.5U
+Mpmos@2 vdd net@13 Out vdd p L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell 'OR{sch}'
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 0
+**VA A 0 DC 0
+**.incude C:\Electric\MODEL_MOS.txt
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__OR
+
+*** SUBCIRCUIT prova_library4_Nand_lay__Or_4inputs FROM CELL Or_4inputs{sch}
+.SUBCKT prova_library4_Nand_lay__Or_4inputs A B C D Out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 net@0 B gnd gnd N L=0.7U W=1.75U
+Mnmos-4@1 net@0 C gnd gnd N L=0.7U W=1.75U
+Mnmos-4@2 net@0 D gnd gnd N L=0.7U W=1.75U
+Mnmos-4@3 Out net@0 gnd gnd n L=0.7U W=1.75U
+Mnmos-4@4 net@0 A gnd gnd N L=0.7U W=1.75U
+Mpmos-4@0 net@89 C net@72 net@72 P L=0.7U W=3.5U
+Mpmos-4@1 net@72 B net@66 net@66 P L=0.7U W=3.5U
+Mpmos-4@2 net@66 A vdd vdd P L=0.7U W=3.5U
+Mpmos-4@3 Out net@0 vdd vdd p L=0.7U W=3.5U
+Mpmos-4@4 net@0 D net@89 net@89 P L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell 'Or_4inputs{sch}'
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 0
+**VA A 0 DC 0
+**VC C 0 DC 0
+**VD D 0 DC 0
+**.incude C:\Electric\MODEL_MOS.txt
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__Or_4inputs
+
+*** SUBCIRCUIT prova_library4_Nand_lay__Or_5inputs FROM CELL Or_5inputs{sch}
+.SUBCKT prova_library4_Nand_lay__Or_5inputs A B C D E Out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 net@23 C gnd gnd N L=0.7U W=1.75U
+Mnmos-4@1 net@23 D gnd gnd N L=0.7U W=1.75U
+Mnmos-4@2 net@23 E gnd gnd N L=0.7U W=1.75U
+Mnmos-4@3 Out net@23 gnd gnd n L=0.7U W=1.75U
+Mnmos-4@4 net@23 B gnd gnd N L=0.7U W=1.75U
+Mnmos-4@5 net@23 A gnd gnd N L=0.7U W=1.75U
+Mpmos-4@0 net@67 C net@52 net@52 P L=0.7U W=3.5U
+Mpmos-4@1 net@52 B net@45 net@45 P L=0.7U W=3.5U
+Mpmos-4@2 net@45 A vdd vdd P L=0.7U W=3.5U
+Mpmos-4@3 Out net@23 vdd vdd p L=0.7U W=3.5U
+Mpmos-4@4 net@112 D net@67 net@67 P L=0.7U W=3.5U
+Mpmos-4@5 net@23 E net@112 net@112 P L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell 'Or_5inputs{sch}'
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 5
+**VA A 0 DC 5
+**VC C 0 DC 5
+**VD D 0 DC 5
+**VE E 0 DC 5
+**.incude C:\Electric\MODEL_MOS.txt
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__Or_5inputs
+
+*** SUBCIRCUIT prova_library4_Nand_lay__CRA FROM CELL CRA{sch}
+.SUBCKT prova_library4_Nand_lay__CRA C0 C1 C2 C3 C4 G0 G1 G2 G3 P0 P1 P2 P3
+** GLOBAL gnd
+** GLOBAL vdd
+X_3Input_A@0 P1 P0 C0 net@29 prova_library4_Nand_lay__3Input_AND
+X_3Input_A@1 P2 P1 G0 net@90 prova_library4_Nand_lay__3Input_AND
+X_3Input_A@2 P3 P2 G1 net@162 prova_library4_Nand_lay__3Input_AND
+X_3Input_O@0 G1 C2 net@32 net@29 prova_library4_Nand_lay__3Input_OR
+X_4input_a@0 P2 P1 P0 C0 net@93 vdd _4input_andgate__4input_andgate
+X_4input_a@1 P3 P2 P1 G0 net@165 vdd _4input_andgate__4input_andgate
+X_5input_a@0 P3 P2 P1 P0 C0 net@155 _4input_andgate__5input_andgate
+XAND@0 P0 net@0 C0 prova_library4_Nand_lay__AND
+XAND@1 P1 net@32 G0 prova_library4_Nand_lay__AND
+XAND@3 P2 net@87 G1 prova_library4_Nand_lay__AND
+XAND@6 P3 net@159 G2 prova_library4_Nand_lay__AND
+XOR@0 G0 net@0 C1 prova_library4_Nand_lay__OR
+XOr_4inpu@0 G2 net@87 net@90 net@93 C3 prova_library4_Nand_lay__Or_4inputs
+XOr_5inpu@1 G3 net@155 net@159 net@162 net@165 C4 prova_library4_Nand_lay__Or_5inputs
+.ENDS prova_library4_Nand_lay__CRA
+
+*** SUBCIRCUIT prova_library4_Nand_lay__XOR FROM CELL XOR{sch}
+.SUBCKT prova_library4_Nand_lay__XOR A AXORB B
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 net@66 A gnd gnd n L=0.7U W=1.75U
+Mnmos-4@1 AXORB B net@66 net@66 n L=0.7U W=1.75U
+Mnmos-4@2 AXORB net@134 net@6 net@6 n L=0.7U W=1.75U
+Mnmos-4@3 net@6 net@125 gnd gnd n L=0.7U W=1.75U
+Mnmos-4@4 net@134 A gnd gnd n L=0.7U W=1.75U
+Mnmos-4@5 net@125 B gnd gnd n L=0.7U W=1.75U
+Mpmos-4@0 AXORB net@134 net@19 net@19 p L=0.7U W=3.5U
+Mpmos-4@1 net@19 B vdd vdd p L=0.7U W=3.5U
+Mpmos-4@2 net@24 A vdd vdd p L=0.7U W=3.5U
+Mpmos-4@3 AXORB net@125 net@24 net@24 p L=0.7U W=3.5U
+Mpmos-4@5 net@134 A vdd vdd p L=0.7U W=3.5U
+Mpmos-4@6 net@125 B vdd vdd p L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell 'XOR{sch}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 0
+**VA A 0 DC 5
+**.tran 0 40n
+.ENDS prova_library4_Nand_lay__XOR
+
+*** SUBCIRCUIT prova_library4_Nand_lay__PFA FROM CELL PFA{sch}
+.SUBCKT prova_library4_Nand_lay__PFA A B C G P S
+** GLOBAL gnd
+** GLOBAL vdd
+XAND@0 B G A prova_library4_Nand_lay__AND
+XXOR@0 P S C prova_library4_Nand_lay__XOR
+XXOR@1 B P A prova_library4_Nand_lay__XOR
+.ENDS prova_library4_Nand_lay__PFA
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 4_input_ADD_SUB{sch}
+XCRA@0 C0 net@14 net@23 net@35 C4 net@11 net@20 net@32 net@42 net@8 net@17 net@28 net@38 prova_library4_Nand_lay__CRA
+XPFA@0 net@51 A0 C0 net@11 net@8 S0 prova_library4_Nand_lay__PFA
+XPFA@1 net@55 A1 net@14 net@20 net@17 S1 prova_library4_Nand_lay__PFA
+XPFA@2 net@54 A2 net@23 net@32 net@28 S2 prova_library4_Nand_lay__PFA
+XPFA@3 net@106 A3 net@35 net@42 net@38 S3 prova_library4_Nand_lay__PFA
+XXOR@0 C0 net@51 B0 prova_library4_Nand_lay__XOR
+XXOR@1 C0 net@55 B1 prova_library4_Nand_lay__XOR
+XXOR@2 C0 net@54 B2 prova_library4_Nand_lay__XOR
+XXOR@3 C0 net@106 B3 prova_library4_Nand_lay__XOR
+
+* Spice Code nodes in cell cell '4_input_ADD_SUB{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+VB0 B0 0 DC 3.3
+VB1 B1 0 DC 0
+VB2 B2 0 DC 0
+VB3 B3 0 DC 0
+VA0 A0 0 DC 0
+VA1 A1 0 DC 3.3
+VA2 A2 0 DC 3.3
+VA3 A3 0 DC 0
+VC0 C0 0 DC 0
+.incude C:\Electric\MODEL_MOS.txt
+.tran 0 40n
+.END

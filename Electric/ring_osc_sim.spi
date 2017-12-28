@@ -1,0 +1,54 @@
+*** SPICE deck for cell ring_osc_sim{sch} from library prova_library4_Nand
+*** Created on Sun Sep 27, 2015 16:02:45
+*** Last revised on Sun Sep 27, 2015 16:17:11
+*** Written on Mon Oct 12, 2015 23:21:03 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT prova_library4_Nand__inverter FROM CELL inverter{sch}
+.SUBCKT prova_library4_Nand__inverter In Out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 Out In gnd gnd n L=0.4U W=0.8U
+Mpmos-4@0 Out In vdd vdd p L=0.4U W=1.6U
+.ENDS prova_library4_Nand__inverter
+
+*** SUBCIRCUIT prova_library4_Nand__ring_osc_21 FROM CELL ring_osc_21{sch}
+.SUBCKT prova_library4_Nand__ring_osc_21 osc_out
+** GLOBAL gnd
+** GLOBAL vdd
+Xinverter@0 osc_out net@0 prova_library4_Nand__inverter
+Xinverter@1 net@0 net@2 prova_library4_Nand__inverter
+Xinverter@2 net@2 net@1 prova_library4_Nand__inverter
+Xinverter@3 net@1 net@6 prova_library4_Nand__inverter
+Xinverter@4 net@6 net@3 prova_library4_Nand__inverter
+Xinverter@5 net@3 net@5 prova_library4_Nand__inverter
+Xinverter@6 net@5 net@4 prova_library4_Nand__inverter
+Xinverter@7 net@4 net@16 prova_library4_Nand__inverter
+Xinverter@8 net@19 net@9 prova_library4_Nand__inverter
+Xinverter@9 net@9 net@11 prova_library4_Nand__inverter
+Xinverter@10 net@11 net@10 prova_library4_Nand__inverter
+Xinverter@11 net@10 net@8 prova_library4_Nand__inverter
+Xinverter@12 net@8 net@12 prova_library4_Nand__inverter
+Xinverter@13 net@12 net@7 prova_library4_Nand__inverter
+Xinverter@14 net@7 net@13 prova_library4_Nand__inverter
+Xinverter@15 net@13 net@17 prova_library4_Nand__inverter
+Xinverter@16 net@16 net@14 prova_library4_Nand__inverter
+Xinverter@17 net@14 net@18 prova_library4_Nand__inverter
+Xinverter@18 net@17 net@15 prova_library4_Nand__inverter
+Xinverter@19 net@15 osc_out prova_library4_Nand__inverter
+Xinverter@20 net@18 net@19 prova_library4_Nand__inverter
+.ENDS prova_library4_Nand__ring_osc_21
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: ring_osc_sim{sch}
+Xring_osc@0 osc_out prova_library4_Nand__ring_osc_21
+
+* Spice Code nodes in cell cell 'ring_osc_sim{sch}'
+VDD VDD 0 DC 1.8
+VGND GND 0 DC 0
+VIN in 0 Pulse(1.8 0 0 100p 100p 10n 20n
+.include C:\Electric\MODEL_MOS.txt
+.tran 0 50n
+.END

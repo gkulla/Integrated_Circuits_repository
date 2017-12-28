@@ -1,0 +1,20 @@
+# header information:
+Hhw_5|9.06
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tbicmos|ScaleFORbicmos()D350.0
+Tmocmos|ScaleFORmocmos()D350.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+Tmocmossub|ScaleFORmocmossub()D350.0
+
+# Cell hw_5;2{sch}
+Chw_5;2{sch}||schematic|1447811521120|1447811521120|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+X
+
+# Cell hw_5;1{sch}
+Chw_5;1{sch}||schematic|1447810567992|1447810567992|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+X

@@ -1,0 +1,29 @@
+*** SPICE deck for cell Or_4inputs{lay} from library prova_library4_Nand_lay
+*** Created on Thu Dec 03, 2015 15:43:08
+*** Last revised on Thu Dec 03, 2015 16:02:01
+*** Written on Mon Dec 07, 2015 21:03:32 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: Or_4inputs{lay}
+Mnmos@0 net@9 D gnd gnd n L=0.7U W=1.75U AS=11.76P AD=4.961P PS=16.24U PD=8.12U
+Mnmos@1 gnd C net@9 gnd n L=0.7U W=1.75U AS=4.961P AD=11.76P PS=8.12U PD=16.24U
+Mnmos@2 net@9 B gnd gnd n L=0.7U W=1.75U AS=11.76P AD=4.961P PS=16.24U PD=8.12U
+Mnmos@3 Out net@9 gnd gnd n L=0.7U W=1.75U AS=11.76P AD=6.737P PS=16.24U PD=10.325U
+Mnmos@4 gnd A net@9 gnd n L=0.7U W=1.75U AS=4.961P AD=11.76P PS=8.12U PD=16.24U
+Mpmos@0 net@9 D net@11 vdd p L=0.7U W=3.5U AS=3.369P AD=4.961P PS=5.425U PD=8.12U
+Mpmos@1 net@11 C net@25 vdd p L=0.7U W=3.5U AS=3.062P AD=3.369P PS=5.25U PD=5.425U
+Mpmos@2 net@25 B net@64 vdd p L=0.7U W=3.5U AS=3.062P AD=3.062P PS=5.25U PD=5.25U
+Mpmos@3 Out net@9 vdd vdd p L=0.7U W=3.5U AS=27.256P AD=6.737P PS=34.825U PD=10.325U
+Mpmos@4 net@64 A vdd vdd p L=0.7U W=3.5U AS=27.256P AD=3.062P PS=34.825U PD=5.25U
+
+* Spice Code nodes in cell cell 'Or_4inputs{lay}'
+**.incude C:\Electric\MODEL_MOS.txt
+**VDD VDD 0 DC 5
+**VGND GND 0 DC 0
+**VB B 0 DC 5
+**VA A 0 DC 5
+**VC C 0 DC 5
+**VD D 0 DC 5
+**.tran 0 40n
+.END

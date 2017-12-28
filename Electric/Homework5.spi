@@ -1,0 +1,30 @@
+*** SPICE deck for cell Homework5{sch} from library prova_library2_IRSIM
+*** Created on Mon Nov 16, 2015 18:54:20
+*** Last revised on Fri Nov 20, 2015 00:04:57
+*** Written on Fri Nov 20, 2015 00:05:03 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Homework5{sch}
+Mnmos-4@0 net@40 z net@11 net@11 n L=0.4U W=1U
+Mnmos-4@1 F x net@40 net@40 n L=0.4U W=1U
+Mnmos-4@2 net@11 CLK gnd nmos-4@2_b n L=0.4U W=1U
+Mnmos-4@3 F x net@49 net@49 n L=0.4U W=1U
+Mnmos-4@4 net@49 y net@11 net@11 n L=0.4U W=1U
+Mnmos-4@5 net@40 w net@11 net@11 n L=0.4U W=1U
+Mpmos-4@0 F CLK vdd vdd p L=0.4U W=2U
+
+* Spice Code nodes in cell cell 'Homework5{sch}'
+VDD VDD 0 DC 1.8
+VGND GND 0 DC 0
+Vx x 0 DC 1.8
+Vy y 0 DC DC PWL REPEAT FOREVER(0 0 0.99n 0 1n 1.8 1.99n 1.8 2n 0)ENDREPEAT
+Vz z 0 DC 1.8
+Vw w 0 DC 1.8
+VCLK CLK 0 DC PWL REPEAT FOREVER(0 0 0.2499n 0 0.25n 1.8 0.499n 1.8 0.5n 0)ENDREPEAT
+CL F 0 5pf
+.TRAN 0 7n
+.include C:\Electric\MODEL_MOS.txt
+.END

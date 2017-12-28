@@ -1,0 +1,28 @@
+*** SPICE deck for cell inverter1_sim{sch} from library inverter1
+*** Created on Wed Nov 18, 2015 09:17:52
+*** Last revised on Wed Nov 18, 2015 09:22:50
+*** Written on Wed Nov 18, 2015 09:24:04 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT inverter1__inverter FROM CELL inverter{sch}
+.SUBCKT inverter1__inverter input output vdd
+** GLOBAL 0
+** GLOBAL vdd
+Mnmos_0 output input 0 0 N L=0.7U W=3.5U
+Mpmos_0 vdd input output vdd P L=0.7U W=7U
+.ENDS inverter1__inverter
+
+.global 0 vdd
+
+*** TOP LEVEL CELL: inverter1_sim{sch}
+Xinverter_0 input output vdd inverter1__inverter
+
+* Spice Code nodes in cell cell 'inverter1_sim{sch}'
+vdd vdd 0 DC 1.8
+vgnd gnd 0 DC 0
+vin input 0 pulse(1.8 0 0 100p 100p 10n 20n)
+cload output 0 100fF
+.trans 0 50n
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

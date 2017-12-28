@@ -1,0 +1,18 @@
+*** SPICE deck for cell 1bitADDER{ic} from library Indipendent_Study
+*** Created on Fri Nov 13, 2015 02:18:49
+*** Last revised on Thu Jul 27, 2017 11:34:41
+*** Written on Thu Jul 27, 2017 11:34:46 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: 1bitADDER{ic}
+
+* Spice Code nodes in cell cell '1bitADDER{ic}'
+VDD VDD 0 DC 5
+VGND GND 0 DC 0
+VA A 0 PULSE(5 0 0 100p 100p 10n 20n)
+VB B 0 PULSE(5 0 0 100p 100p 10n 20n)
+VCin Cin 0 Pulse(5 0 0 100p 100p 10n 20n)
+.tran 0 50n
+.include C:\Electric\panic\C5_models.txt
+.END

@@ -1,0 +1,440 @@
+Title: *** SPICE deck for cell 1bitADDER{lay} from library prova_library4_Nand_lay
+Date: Sun Nov 15 13:57:06 2015
+Plotname: Transient Analysis
+Flags: real forward
+No. Variables: 396
+No. Points:            6
+Offset:   0.0000000000000000e+000
+Command: Linear Technology Corporation LTspice IV
+Variables:
+	0	time	time
+	1	V(cin)	voltage
+	2	V(net@0)	voltage
+	3	V(net@1)	voltage
+	4	V(net@14)	voltage
+	5	V(net@22)	voltage
+	6	V(a)	voltage
+	7	V(net@47)	voltage
+	8	V(net@61)	voltage
+	9	V(net@69)	voltage
+	10	V(net@94)	voltage
+	11	V(net@108)	voltage
+	12	V(net@116)	voltage
+	13	V(net@202)	voltage
+	14	V(cout)	voltage
+	15	V(net@742)	voltage
+	16	V(net@601)	voltage
+	17	V(net@678)	voltage
+	18	V(net@600)	voltage
+	19	V(net@708)	voltage
+	20	V(net@626)	voltage
+	21	V(net@741)	voltage
+	22	V(net@623)	voltage
+	23	V(net@778)	voltage
+	24	V(net@780)	voltage
+	25	V(net@953)	voltage
+	26	V(net@812)	voltage
+	27	V(net@889)	voltage
+	28	V(net@811)	voltage
+	29	V(net@919)	voltage
+	30	V(net@837)	voltage
+	31	V(net@952)	voltage
+	32	V(net@834)	voltage
+	33	V(net@989)	voltage
+	34	V(sum)	voltage
+	35	V(b)	voltage
+	36	V(net@1080)	voltage
+	37	V(net@1093)	voltage
+	38	V(net@1227)	voltage
+	39	V(net@1085)	voltage
+	40	V(net@1257)	voltage
+	41	V(net@1121)	voltage
+	42	V(net@1290)	voltage
+	43	V(net@1084)	voltage
+	44	V(net@1116)	voltage
+	45	V(vdd)	voltage
+	46	V(net@224)	voltage
+	47	V(net@238)	voltage
+	48	Id(Mpmos@58)	device_current
+	49	Ig(Mpmos@58)	device_current
+	50	Ib(Mpmos@58)	device_current
+	51	Is(Mpmos@58)	device_current
+	52	Id(Mpmos@57)	device_current
+	53	Ig(Mpmos@57)	device_current
+	54	Ib(Mpmos@57)	device_current
+	55	Is(Mpmos@57)	device_current
+	56	Id(Mpmos@56)	device_current
+	57	Ig(Mpmos@56)	device_current
+	58	Ib(Mpmos@56)	device_current
+	59	Is(Mpmos@56)	device_current
+	60	Id(Mpmos@55)	device_current
+	61	Ig(Mpmos@55)	device_current
+	62	Ib(Mpmos@55)	device_current
+	63	Is(Mpmos@55)	device_current
+	64	Id(Mpmos@54)	device_current
+	65	Ig(Mpmos@54)	device_current
+	66	Ib(Mpmos@54)	device_current
+	67	Is(Mpmos@54)	device_current
+	68	Id(Mpmos@53)	device_current
+	69	Ig(Mpmos@53)	device_current
+	70	Ib(Mpmos@53)	device_current
+	71	Is(Mpmos@53)	device_current
+	72	Id(Mpmos@52)	device_current
+	73	Ig(Mpmos@52)	device_current
+	74	Ib(Mpmos@52)	device_current
+	75	Is(Mpmos@52)	device_current
+	76	Id(Mpmos@51)	device_current
+	77	Ig(Mpmos@51)	device_current
+	78	Ib(Mpmos@51)	device_current
+	79	Is(Mpmos@51)	device_current
+	80	Id(Mpmos@50)	device_current
+	81	Ig(Mpmos@50)	device_current
+	82	Ib(Mpmos@50)	device_current
+	83	Is(Mpmos@50)	device_current
+	84	Id(Mpmos@49)	device_current
+	85	Ig(Mpmos@49)	device_current
+	86	Ib(Mpmos@49)	device_current
+	87	Is(Mpmos@49)	device_current
+	88	Id(Mpmos@48)	device_current
+	89	Ig(Mpmos@48)	device_current
+	90	Ib(Mpmos@48)	device_current
+	91	Is(Mpmos@48)	device_current
+	92	Id(Mpmos@47)	device_current
+	93	Ig(Mpmos@47)	device_current
+	94	Ib(Mpmos@47)	device_current
+	95	Is(Mpmos@47)	device_current
+	96	Id(Mpmos@46)	device_current
+	97	Ig(Mpmos@46)	device_current
+	98	Ib(Mpmos@46)	device_current
+	99	Is(Mpmos@46)	device_current
+	100	Id(Mpmos@45)	device_current
+	101	Ig(Mpmos@45)	device_current
+	102	Ib(Mpmos@45)	device_current
+	103	Is(Mpmos@45)	device_current
+	104	Id(Mpmos@44)	device_current
+	105	Ig(Mpmos@44)	device_current
+	106	Ib(Mpmos@44)	device_current
+	107	Is(Mpmos@44)	device_current
+	108	Id(Mpmos@43)	device_current
+	109	Ig(Mpmos@43)	device_current
+	110	Ib(Mpmos@43)	device_current
+	111	Is(Mpmos@43)	device_current
+	112	Id(Mpmos@42)	device_current
+	113	Ig(Mpmos@42)	device_current
+	114	Ib(Mpmos@42)	device_current
+	115	Is(Mpmos@42)	device_current
+	116	Id(Mpmos@41)	device_current
+	117	Ig(Mpmos@41)	device_current
+	118	Ib(Mpmos@41)	device_current
+	119	Is(Mpmos@41)	device_current
+	120	Id(Mpmos@40)	device_current
+	121	Ig(Mpmos@40)	device_current
+	122	Ib(Mpmos@40)	device_current
+	123	Is(Mpmos@40)	device_current
+	124	Id(Mpmos@39)	device_current
+	125	Ig(Mpmos@39)	device_current
+	126	Ib(Mpmos@39)	device_current
+	127	Is(Mpmos@39)	device_current
+	128	Id(Mpmos@38)	device_current
+	129	Ig(Mpmos@38)	device_current
+	130	Ib(Mpmos@38)	device_current
+	131	Is(Mpmos@38)	device_current
+	132	Id(Mpmos@37)	device_current
+	133	Ig(Mpmos@37)	device_current
+	134	Ib(Mpmos@37)	device_current
+	135	Is(Mpmos@37)	device_current
+	136	Id(Mpmos@36)	device_current
+	137	Ig(Mpmos@36)	device_current
+	138	Ib(Mpmos@36)	device_current
+	139	Is(Mpmos@36)	device_current
+	140	Id(Mpmos@35)	device_current
+	141	Ig(Mpmos@35)	device_current
+	142	Ib(Mpmos@35)	device_current
+	143	Is(Mpmos@35)	device_current
+	144	Id(Mpmos@34)	device_current
+	145	Ig(Mpmos@34)	device_current
+	146	Ib(Mpmos@34)	device_current
+	147	Is(Mpmos@34)	device_current
+	148	Id(Mpmos@33)	device_current
+	149	Ig(Mpmos@33)	device_current
+	150	Ib(Mpmos@33)	device_current
+	151	Is(Mpmos@33)	device_current
+	152	Id(Mpmos@32)	device_current
+	153	Ig(Mpmos@32)	device_current
+	154	Ib(Mpmos@32)	device_current
+	155	Is(Mpmos@32)	device_current
+	156	Id(Mpmos@31)	device_current
+	157	Ig(Mpmos@31)	device_current
+	158	Ib(Mpmos@31)	device_current
+	159	Is(Mpmos@31)	device_current
+	160	Id(Mpmos@30)	device_current
+	161	Ig(Mpmos@30)	device_current
+	162	Ib(Mpmos@30)	device_current
+	163	Is(Mpmos@30)	device_current
+	164	Id(Mpmos@29)	device_current
+	165	Ig(Mpmos@29)	device_current
+	166	Ib(Mpmos@29)	device_current
+	167	Is(Mpmos@29)	device_current
+	168	Id(Mpmos@16)	device_current
+	169	Ig(Mpmos@16)	device_current
+	170	Ib(Mpmos@16)	device_current
+	171	Is(Mpmos@16)	device_current
+	172	Id(Mpmos@15)	device_current
+	173	Ig(Mpmos@15)	device_current
+	174	Ib(Mpmos@15)	device_current
+	175	Is(Mpmos@15)	device_current
+	176	Id(Mpmos@14)	device_current
+	177	Ig(Mpmos@14)	device_current
+	178	Ib(Mpmos@14)	device_current
+	179	Is(Mpmos@14)	device_current
+	180	Id(Mpmos@13)	device_current
+	181	Ig(Mpmos@13)	device_current
+	182	Ib(Mpmos@13)	device_current
+	183	Is(Mpmos@13)	device_current
+	184	Id(Mpmos@8)	device_current
+	185	Ig(Mpmos@8)	device_current
+	186	Ib(Mpmos@8)	device_current
+	187	Is(Mpmos@8)	device_current
+	188	Id(Mpmos@7)	device_current
+	189	Ig(Mpmos@7)	device_current
+	190	Ib(Mpmos@7)	device_current
+	191	Is(Mpmos@7)	device_current
+	192	Id(Mpmos@6)	device_current
+	193	Ig(Mpmos@6)	device_current
+	194	Ib(Mpmos@6)	device_current
+	195	Is(Mpmos@6)	device_current
+	196	Id(Mpmos@5)	device_current
+	197	Ig(Mpmos@5)	device_current
+	198	Ib(Mpmos@5)	device_current
+	199	Is(Mpmos@5)	device_current
+	200	Id(Mpmos@4)	device_current
+	201	Ig(Mpmos@4)	device_current
+	202	Ib(Mpmos@4)	device_current
+	203	Is(Mpmos@4)	device_current
+	204	Id(Mpmos@3)	device_current
+	205	Ig(Mpmos@3)	device_current
+	206	Ib(Mpmos@3)	device_current
+	207	Is(Mpmos@3)	device_current
+	208	Id(Mpmos@2)	device_current
+	209	Ig(Mpmos@2)	device_current
+	210	Ib(Mpmos@2)	device_current
+	211	Is(Mpmos@2)	device_current
+	212	Id(Mpmos@1)	device_current
+	213	Ig(Mpmos@1)	device_current
+	214	Ib(Mpmos@1)	device_current
+	215	Is(Mpmos@1)	device_current
+	216	Id(Mpmos@0)	device_current
+	217	Ig(Mpmos@0)	device_current
+	218	Ib(Mpmos@0)	device_current
+	219	Is(Mpmos@0)	device_current
+	220	Id(Mnmos@58)	device_current
+	221	Ig(Mnmos@58)	device_current
+	222	Ib(Mnmos@58)	device_current
+	223	Is(Mnmos@58)	device_current
+	224	Id(Mnmos@57)	device_current
+	225	Ig(Mnmos@57)	device_current
+	226	Ib(Mnmos@57)	device_current
+	227	Is(Mnmos@57)	device_current
+	228	Id(Mnmos@56)	device_current
+	229	Ig(Mnmos@56)	device_current
+	230	Ib(Mnmos@56)	device_current
+	231	Is(Mnmos@56)	device_current
+	232	Id(Mnmos@55)	device_current
+	233	Ig(Mnmos@55)	device_current
+	234	Ib(Mnmos@55)	device_current
+	235	Is(Mnmos@55)	device_current
+	236	Id(Mnmos@54)	device_current
+	237	Ig(Mnmos@54)	device_current
+	238	Ib(Mnmos@54)	device_current
+	239	Is(Mnmos@54)	device_current
+	240	Id(Mnmos@53)	device_current
+	241	Ig(Mnmos@53)	device_current
+	242	Ib(Mnmos@53)	device_current
+	243	Is(Mnmos@53)	device_current
+	244	Id(Mnmos@52)	device_current
+	245	Ig(Mnmos@52)	device_current
+	246	Ib(Mnmos@52)	device_current
+	247	Is(Mnmos@52)	device_current
+	248	Id(Mnmos@51)	device_current
+	249	Ig(Mnmos@51)	device_current
+	250	Ib(Mnmos@51)	device_current
+	251	Is(Mnmos@51)	device_current
+	252	Id(Mnmos@50)	device_current
+	253	Ig(Mnmos@50)	device_current
+	254	Ib(Mnmos@50)	device_current
+	255	Is(Mnmos@50)	device_current
+	256	Id(Mnmos@49)	device_current
+	257	Ig(Mnmos@49)	device_current
+	258	Ib(Mnmos@49)	device_current
+	259	Is(Mnmos@49)	device_current
+	260	Id(Mnmos@48)	device_current
+	261	Ig(Mnmos@48)	device_current
+	262	Ib(Mnmos@48)	device_current
+	263	Is(Mnmos@48)	device_current
+	264	Id(Mnmos@47)	device_current
+	265	Ig(Mnmos@47)	device_current
+	266	Ib(Mnmos@47)	device_current
+	267	Is(Mnmos@47)	device_current
+	268	Id(Mnmos@46)	device_current
+	269	Ig(Mnmos@46)	device_current
+	270	Ib(Mnmos@46)	device_current
+	271	Is(Mnmos@46)	device_current
+	272	Id(Mnmos@45)	device_current
+	273	Ig(Mnmos@45)	device_current
+	274	Ib(Mnmos@45)	device_current
+	275	Is(Mnmos@45)	device_current
+	276	Id(Mnmos@44)	device_current
+	277	Ig(Mnmos@44)	device_current
+	278	Ib(Mnmos@44)	device_current
+	279	Is(Mnmos@44)	device_current
+	280	Id(Mnmos@43)	device_current
+	281	Ig(Mnmos@43)	device_current
+	282	Ib(Mnmos@43)	device_current
+	283	Is(Mnmos@43)	device_current
+	284	Id(Mnmos@42)	device_current
+	285	Ig(Mnmos@42)	device_current
+	286	Ib(Mnmos@42)	device_current
+	287	Is(Mnmos@42)	device_current
+	288	Id(Mnmos@41)	device_current
+	289	Ig(Mnmos@41)	device_current
+	290	Ib(Mnmos@41)	device_current
+	291	Is(Mnmos@41)	device_current
+	292	Id(Mnmos@40)	device_current
+	293	Ig(Mnmos@40)	device_current
+	294	Ib(Mnmos@40)	device_current
+	295	Is(Mnmos@40)	device_current
+	296	Id(Mnmos@39)	device_current
+	297	Ig(Mnmos@39)	device_current
+	298	Ib(Mnmos@39)	device_current
+	299	Is(Mnmos@39)	device_current
+	300	Id(Mnmos@38)	device_current
+	301	Ig(Mnmos@38)	device_current
+	302	Ib(Mnmos@38)	device_current
+	303	Is(Mnmos@38)	device_current
+	304	Id(Mnmos@37)	device_current
+	305	Ig(Mnmos@37)	device_current
+	306	Ib(Mnmos@37)	device_current
+	307	Is(Mnmos@37)	device_current
+	308	Id(Mnmos@36)	device_current
+	309	Ig(Mnmos@36)	device_current
+	310	Ib(Mnmos@36)	device_current
+	311	Is(Mnmos@36)	device_current
+	312	Id(Mnmos@35)	device_current
+	313	Ig(Mnmos@35)	device_current
+	314	Ib(Mnmos@35)	device_current
+	315	Is(Mnmos@35)	device_current
+	316	Id(Mnmos@34)	device_current
+	317	Ig(Mnmos@34)	device_current
+	318	Ib(Mnmos@34)	device_current
+	319	Is(Mnmos@34)	device_current
+	320	Id(Mnmos@33)	device_current
+	321	Ig(Mnmos@33)	device_current
+	322	Ib(Mnmos@33)	device_current
+	323	Is(Mnmos@33)	device_current
+	324	Id(Mnmos@32)	device_current
+	325	Ig(Mnmos@32)	device_current
+	326	Ib(Mnmos@32)	device_current
+	327	Is(Mnmos@32)	device_current
+	328	Id(Mnmos@31)	device_current
+	329	Ig(Mnmos@31)	device_current
+	330	Ib(Mnmos@31)	device_current
+	331	Is(Mnmos@31)	device_current
+	332	Id(Mnmos@30)	device_current
+	333	Ig(Mnmos@30)	device_current
+	334	Ib(Mnmos@30)	device_current
+	335	Is(Mnmos@30)	device_current
+	336	Id(Mnmos@29)	device_current
+	337	Ig(Mnmos@29)	device_current
+	338	Ib(Mnmos@29)	device_current
+	339	Is(Mnmos@29)	device_current
+	340	Id(Mnmos@16)	device_current
+	341	Ig(Mnmos@16)	device_current
+	342	Ib(Mnmos@16)	device_current
+	343	Is(Mnmos@16)	device_current
+	344	Id(Mnmos@15)	device_current
+	345	Ig(Mnmos@15)	device_current
+	346	Ib(Mnmos@15)	device_current
+	347	Is(Mnmos@15)	device_current
+	348	Id(Mnmos@14)	device_current
+	349	Ig(Mnmos@14)	device_current
+	350	Ib(Mnmos@14)	device_current
+	351	Is(Mnmos@14)	device_current
+	352	Id(Mnmos@13)	device_current
+	353	Ig(Mnmos@13)	device_current
+	354	Ib(Mnmos@13)	device_current
+	355	Is(Mnmos@13)	device_current
+	356	Id(Mnmos@8)	device_current
+	357	Ig(Mnmos@8)	device_current
+	358	Ib(Mnmos@8)	device_current
+	359	Is(Mnmos@8)	device_current
+	360	Id(Mnmos@7)	device_current
+	361	Ig(Mnmos@7)	device_current
+	362	Ib(Mnmos@7)	device_current
+	363	Is(Mnmos@7)	device_current
+	364	Id(Mnmos@6)	device_current
+	365	Ig(Mnmos@6)	device_current
+	366	Ib(Mnmos@6)	device_current
+	367	Is(Mnmos@6)	device_current
+	368	Id(Mnmos@5)	device_current
+	369	Ig(Mnmos@5)	device_current
+	370	Ib(Mnmos@5)	device_current
+	371	Is(Mnmos@5)	device_current
+	372	Id(Mnmos@4)	device_current
+	373	Ig(Mnmos@4)	device_current
+	374	Ib(Mnmos@4)	device_current
+	375	Is(Mnmos@4)	device_current
+	376	Id(Mnmos@3)	device_current
+	377	Ig(Mnmos@3)	device_current
+	378	Ib(Mnmos@3)	device_current
+	379	Is(Mnmos@3)	device_current
+	380	Id(Mnmos@2)	device_current
+	381	Ig(Mnmos@2)	device_current
+	382	Ib(Mnmos@2)	device_current
+	383	Is(Mnmos@2)	device_current
+	384	Id(Mnmos@1)	device_current
+	385	Ig(Mnmos@1)	device_current
+	386	Ib(Mnmos@1)	device_current
+	387	Is(Mnmos@1)	device_current
+	388	Id(Mnmos@0)	device_current
+	389	Ig(Mnmos@0)	device_current
+	390	Ib(Mnmos@0)	device_current
+	391	Is(Mnmos@0)	device_current
+	392	I(Vcin)	device_current
+	393	I(Va)	device_current
+	394	I(Vb)	device_current
+	395	I(Vdd)	device_current
+Binary:
+            y …@   @   @r.2    y …@   @r.2LD>   @r.2ςÿ@.2VD>   @­.2­.3­.2­.3UD>   @θ§µ4ώÿ@®.2®.3VD>   @XD>   @­.2®.3 …@   @   @­.2­.3VD>   @XD>   @­.2­.3 …@   @ϋÿ@χÿ@π{ÿ   €"I Β΅I n^®   €"I n^.ς²%   €0ξ―,όπ―¬όπ―¬   €0ξ―,“ς²%ςef,   €n®Pςef¬ρef¬   €n®Pρef,τef,   €p®Pτef¬τef¬   €p®Pτef,ς²%   €0ξ―,όπ―¬όπ―¬   €0ξ―,ς²%|ÿ   €"I Ρ΅I ^®   €"I ^.xσ²%   €0ξ―,όπ―¬όπ―¬   €0ξ―,“ς²%οef,   €k®Pοef¬οef¬   €k®Pοef,τef,   €p®Pτef¬τef¬   €p®Pτef,xσ²%   €0ξ―,όπ―¬όπ―¬   €0ξ―,xσ²%\0p/   €—Y!\0p―ΒZ΅   €—Y!Π*
+τef,   €p®Pτef¬τef¬   €p®Pτef,“ς²%   €0ξ―,όπ―¬όπ―¬   €0ξ―,Ες²%Ες²%   €0ξ―,όπ―¬όπ―¬   €0ξ―,Ες²%τef,   €p®Pτef¬τef¬   €p®Pτef,Ζπ―¬   €ϊν―,½ϊ²%G$40   €=#K#G$4°G$40   €Knσ"G$4°G$40   €0T""G$4°“ς²%   €γν―,―π―¬ωef,   €σ Pωef¬ωef¬   €σ Pωef,Ες²%   €γν―,―π―¬Τ{ÿ   €±I o”I ^®   €±I ^.Ες²%   €γν―,―π―¬Τ{ÿ   €±I o”I ^®   €±I ^.Θ5®    ?'!­ά^.•z#®    O`’¬Ζ5.όπ/­    Ξ#bόπ/-όπ/­    ώ•όπ/-΄―Η«    z΄¬σeζ,]€µ«    Ήzª΄―Η+³―Η«    z΄¬σeζ,\€µ«    Έzª³―Η+όπ/­    Ξ#bόπ/-όπ/­    ώ•όπ/-ΡΖ5®    @'!­΅^.¥z#®    Q`’¬―Ζ5.όπ/­    Ξ#bόπ/-όπ/­    ώ•όπ/-΄―Η«    z΄¬σeζ,]€µ«    Ήzª΄―Η+³―Η«    z΄¬σeζ,\€µ«    Έzª³―Η+όπ/­    Ο#bόπ/-όπ/­    ώ•όπ/-λ°j―    /ξ―¬\0p/λ°j―    Θ λ°j/½―Η«    z΄¬υeζ,f€µ«    ¶zª½―Η+όπ/­    Ξ#bόπ/-όπ/­    ώ•όπ/-ϋπ/­    Ξ#bϋπ/-όπ/­    ώ•όπ/-³―Η«    z΄¬σeζ,\€µ«    Έzª³―Η+Ζπ―,    ΤΖπ―¬_0p/    lν―¬σ°j―σ°j―    lν―¬_0p/_0p/    lν―¬σ°j―°π―¬    δς°π―,ή―Η«    z΄¬ωeζ,Z€µ«    |ªή―Η+―π―¬    δς―π―,xΝ5®    :'!­F^.Ez#®    S`’¬PΖ5.―π―¬    δς―π―,xΝ5®    :'!­F^.Ez#®    S`’¬PΖ5.            &¥°ΓI§“®G>    y …@   @   @r.2    y …@   @r.2LD>   @q.2ςÿ@.2VD>   @­.2­.3¬.2¬.3UD>   @θ§µ4ώÿ@®.2®.3VD>   @XD>   @Ή.2Ή.3 …@   @   @­.2­.3VD>   @XD>   @*/2)/3 …@   @ϋÿ@χÿ@ @δ @  n  ή\^® ΐ>  T\^.ς²%    0ξ―,όπ―¬όπ―¬    0ξ―,ς²%¶df,     ΐΨ·df¬·df¬   › ÒΨ¶df,τef,      Pτef¬τef¬      Pτef,ς²%    0ξ―,όπ―¬όπ―¬    0ξ―,ς²% 8 P@Χ)  U ΅^®    €"I ΅^.ϊρ²% €z0ξ―,όπ―¬όπ―¬ ΐΎ0ξ―,υ²%Φef, ΐ> °7 Φef¬Φef¬  ? ΐ. Χef,ςef,      Ησef¬σef¬      Ησef,ϋρ²% ΐJ0ξ―,όπ―¬όπ―¬ @J0ξ―,σ²%\0p/ ΐΎ 0!\0p―  7΅ ΐ> @9! Έlξef,      Rξef¬ξef¬  €›  Pξef,’ς²%  <0ξ―,όπ―¬όπ―¬  '0ξ―,€σ²%Gρ²% €b0ξ―,όπ―¬όπ―¬ ΐV0ξ―, ς²%ςef,  > €¤ρef¬ρef¬     €¤ρef,Ζπ―¬  Ώϊν―,ΐχ²%F$40  @ΐJ#G$4°F$40     pσ"G$4°G$40 ΐΎ€B#"F$4°’ς²%    γν―,―π―¬ψef,      Pψef¬ψef¬      Pψef,Hρ²% ‰δν―,°π―¬ `7 ΰ, €,  –4^®  > €,4^.‰π²% €Φγν―,―π―¬ €/ `ϊ ΐΦ  ®4^®  Ώ   4^.TΗ5®!¥p)!­Ψ^.–z#®4!¥±d’¬TΗ5.ρ/­     0bρ/-ρ/­      –ρ/-΄―Η«  €z΄¬ςeζ,]€µ«    Ήzª΄―Η+³―Η«    z΄¬ςeζ,\€µ«    Έzª³―Η+όπ/­      bόπ/-όπ/­      –όπ/-ΐΖ5®@Zq£u'!­΅^.¥z#®`Εq£Ί`’¬ΐΖ5.ρ/­  ? €ρ/-ρ/­      Μρ/-΄―Η«  z΄¬σeζ,]€µ«    Ήzª΄―Η+³―Η«  ?z΄¬σeζ,\€µ« ΌΎΈzª³―Η+όπ/­  Ώ  §όπ/-όπ/­  >  –όπ/-κ°j―  n0ξ―¬\0p/κ°j―      Θ κ°j/½―Η«   z΄¬υeζ,f€µ«  Θ¶zª½―Η+ϋπ/­ ΐΎ π ϋπ/-ϋπ/­  Ύ zϋπ/-όπ/­ ΌΎ  `όπ/-όπ/­  >  –όπ/-³―Η« ΐ>z΄¬ςeζ,\€µ«  ΏΈzª³―Η+Ζπ―, ΐΎ  Ζπ―¬^0p/  lν―¬τ°j―τ°j―  >lν―¬^0p/_0p/  olν―¬τ°j―®π―¬      ®π―,ή―Η«    z΄¬ωeζ,Z€µ«    |ªή―Η+°π―¬   €ή―π―,ΫΙ5®+}>¦j2!­4^.Fz#®
+t>¦΄v’¬ΫΙ5.―π―¬    ―π―,ΫΙ5®|>¦j2!­4^.Fz#®ςs>¦΄v’¬ΫΙ5. ¤>& (>& ΐΘ &¥°κά„ƒlX>    y …@   @   @r.2    y …@   @q.2LD>   @q.2ςÿ@.2VD>   @­.2­.3­.2­.3UD>   @θ§µ4ώÿ@®.2®.3VD>   @XD>   @Ή.2Ή.3 …@   @   @­.2­.3VD>   @XD>   @(/2(/3 …@   @ϋÿ@χÿ@  ’  Θ €(  @. \^® °Ύ ΰl [^.ς²%    0ξ―,όπ―¬όπ―¬ €Ύ0ξ―,υ²%Ίdf,      ¤Ίdf¬Ήdf¬ €> ¨¤Ίdf,υef, ΐ> ΰδφef¬φef¬ ΐ> ΰδυef,ς²%    0ξ―,όπ―¬όπ―¬    0ξ―,ς²% Θ6 δ& bν ά΅^®     ΅^.ϊρ²% €V0ξ―,όπ―¬όπ―¬ `ξ0ξ―,Ψξ²%Χef, ΐ> ΐ. Φef¬Φef¬ €> ΐ1 Χef,ςef,     ΰ’ςef¬ςef¬     ΰ’σef,ϊρ²% €>0ξ―,όπ―¬όπ―¬ ΐ>0ξ―,xσ²%\0p/     P+!\0p― 2΅  '  5!  yξef,      Pξef¬ξef¬  €  Pξef,’ς²%    0ξ―,όπ―¬όπ―¬  	 0ξ―,€σ²%Κο²% `ά0ξ―,όπ―¬όπ―¬ 	 0ξ―,€σ²%ρef,      Pρef¬ςef¬      Pρef,Ζπ―¬    ϊν―,ΐϊ²%G$40  ΎΐK#G$4°F$40 ΐΎ Θφ"G$4°G$40 ΐ>ΐκ'"F$4°’ς²%    δν―,―π―¬ψef,      Pψef¬ψef¬      Pψef,ς²% ΐΎγν―,―π―¬ ΐΩ (   €a € "^®     @ε"^.Λο²%  δν―,―π―¬ €ή Σ  \   "^®  Ώ ΰf "^.RΗ5®΄/¥j)!­Τ^.–z#®\)¥¤d’¬RΗ5.›ρ/­     `D›ρ/-›ρ/­ ΐΎ  Ρ›ρ/-΄―Η«  ?z΄¬σeζ,\€µ«    Ήzª΄―Η+³―Η«    z΄¬ςeζ,\€µ«    Έzª³―Η+όπ/­      όπ/-ϋπ/­  Ύ  ϋπ/-ΐΖ5®€¦n£t'!­΅^.¥z#®`Κn£Έ`’¬ΐΖ5.ρ/­  >  bρ/-
+ρ/­ ΐΎ  Ί
+ρ/-΄―Η« €Ύz΄¬σeζ,\€µ«    Ήzª΄―Η+³―Η«  ?z΄¬ςeζ,\€µ« ΌΎΈzª³―Η+όπ/­  Ύ  ªόπ/-όπ/­  Ώ  υόπ/-κ°j―  ΐ/ξ―¬\0p/κ°j―     Θ κ°j/Ό―Η«   z΄¬τeζ,f€µ«  ¶zªΌ―Η+όπ/­     @Dόπ/-όπ/­ €ξ Ρόπ/-όπ/­ ΌΎ  vόπ/-όπ/­ €ξ €Ίόπ/-³―Η«    z΄¬σeζ,\€µ«  ΏΈzª³―Η+Ζπ―,      Ζπ―¬^0p/  Έlν―¬τ°j―τ°j―    lν―¬^0p/_0p/ €ƒlν―¬τ°j―®π―¬      ®π―,ή―Η«    z΄¬ωeζ,Z€µ«    |ªή―Η+®π―¬  ΐ €f®π―,ÒΙ5®h<¦K2!­"^.Gz#®΅`<¦vv’¬ÒΙ5.―π―¬  Ώ  P―π―,ÒΙ5®£h<¦K2!­"^.Gz#® a<¦vv’¬ÒΙ5. ><& T<& °‘ €&¥°yD²ή€b>    y …@   @   @r.2    y …@   @r.2LD>   @q.2ςÿ@.2VD>   @­.2­.3­.2­.3UD>   @θ§µ4ώÿ@®.2®.3VD>   @XD>   @Έ.2Ή.3 …@   @   @­.2­.3VD>   @XD>   @'/2'/3 …@   @ϋÿ@χÿ@ `D   €2 €Ψ\^®     ΐ
+ \^.ς²% €>0ξ―,όπ―¬όπ―¬  Ύ0ξ―,Pσ²%½df,  Ώ ΰB Ύdf¬½df¬ €> ΧB Όdf,φef,      Rφef¬φef¬      Rυef,ς²%    0ξ―,όπ―¬όπ―¬    0ξ―,ς²% § V€  Έ# ^® ΐΎ ² ^.ϊρ²% ΐ0ξ―,όπ―¬όπ―¬  0ξ―,Ξτ²%Τef, ΐ> ΰ€Τef¬Υef¬ €> €€Υef,τef,      Pτef¬τef¬      Pτef,ϊρ²% €20ξ―,όπ―¬όπ―¬ ΐ0ξ―, ξ²%\0p/     ΰ,!\0p― x2΅ ΐ&  5! €xξef,      Rξef¬ξef¬      Pξef,Σρ²%  V0ξ―,όπ―¬όπ―¬ ΐΦ0ξ―,Pρ²%Κο²% ΐΦ0ξ―,όπ―¬όπ―¬ €Φ0ξ―,Hρ²%οef, ΐ> π ξef¬ξef¬ ΐ> π οef,Ζπ―¬  	 ϊν―,xϋ²%G$40 €n  QE#G$4°F$40  > Τπ"G$4°G$40     T""F$4°’ς²%    δν―,―π―¬ψef,      Pψef¬ψef¬      Pψef,π²% ζ¦γν―,―π―¬ `¤ Π¬  o  Θ^®    €Q^.ς²% €nδν―,―π―¬ p² ΐ»  ( @t^®  ?  ‚^.PΗ5®H]¥d)!­Π^.–z#®°J¥d’¬PΗ5.™ρ/­ €> H. ρ/-™ρ/­     €™ρ/-΄―Η«  Ώz΄¬ςeζ,\€µ«    Ήzª΄―Η+³―Η«    z΄¬ςeζ,\€µ«    Έzª³―Η+όπ/­       ϋπ/-ϋπ/­      –ϋπ/-ΐΖ5®@Ϋk£t'!­ ^.¥z#®@|k£Έ`’¬ΐΖ5.
+ρ/­  Ύ ° 
+ρ/-
+ρ/­     €
+ρ/-΄―Η«  z΄¬σeζ,\€µ«    Ήzª΄―Η+³―Η«    z΄¬ςeζ,\€µ« ΌΎΈzª³―Η+όπ/­     `" όπ/-όπ/­  >  –όπ/-κ°j―  °/ξ―¬\0p/κ°j―     `Ύ κ°j/½―Η«    z΄¬υeζ,f€µ«  ·zª½―Η+όπ/­  > ΐ—όπ/-όπ/­ €Ύ  –όπ/-ϋπ/­ ΌΎ   όπ/-όπ/­  Ώ  –όπ/-³―Η« ΐΎz΄¬σeζ,\€µ«  ΏΈzª³―Η+Ζπ―, ΐΎ  TΖπ―¬^0p/ €‰lν―¬τ°j―τ°j― ΐ>lν―¬^0p/_0p/  blν―¬τ°j―®π―¬      ®π―,ή―Η«    z΄¬ωeζ,Z€µ«    |ªή―Η+―π―¬    (°π―,ΚΙ5®ξ[:¦,2!­^.Hz#®ΌS:¦8v’¬ΚΙ5.―π―¬  @  V®π―,ΚΙ5® [:¦,2!­^.Hz#®S:¦8v’¬ΚΙ5. b:& d:& pή ~&¥°ΐsW‹Ϋue>    y …@   @   @r.2    y …@   @q.2LD>   @q.2ςÿ@.2VD>   @®.2­.3­.2­.3UD>   @θ§µ4ώÿ@®.2®.3VD>   @XD>   @Έ.2Ή.3 …@   @   @¬.2­.3VD>   @XD>   @&/2&/3 …@   @ϋÿ@χÿ@%O―H―Fβ|% ΕΓQ \^®Ε¨ρƒ \^.ς²%    0ξ―,όπ―¬όπ―¬I¬Μ0ξ―,"υ²%Ύdf,¦ω£”ΑΏdf¬Ώdf¬Λurα°Ώdf,φef,Ρΐ£τ¤‹ χef¬χef¬ΓΣ£τ¤‹ φef,ς²%Ρΐ#0ξ―,όπ―¬όπ―¬Ρΐ#0ξ―,Χσ²%TΠ™HΧ©―δρ ^®χ›½!Ξ ^.Kυ²%Ή‰0ξ―,ϋπ―¬όπ―¬ϊ/ξ―,£ς²%Ωef,€ύ+aΔ§ Ϊef¬Ϋef¬ΕθρΤΊ£ Ωef,ςef,      Rςef¬ςef¬      Rςef,Jυ²%Πϊ|0ξ―,όπ―¬όπ―¬Πϊ|0ξ―,¥ρ²%\0p/ª›Ήγ†!\0p―Π ΅xΛ 8ϋ!΄tοef,ΓΣ# Vψ!ρef¬ρef¬Εθρ,!οef,”ς²%ή¶«0ξ―,όπ―¬όπ―¬γ# 0ξ―,Wπ²%ο²%μϋ 0ξ―,όπ―¬όπ―¬¨n 0ξ―,‘ο²%ςef,,€ύΕςef¬ςef¬    €ύΕςef,Ζπ―¬υεªϊν―,ψ²%F$40    RAL#G$4°F$40ª,—σ"G$4°G$40NΜωγE"F$4°’ς²%¦ω#γν―,―π―¬ψef,    Α¥+ ωef¬ωef¬    Α¥+ ψef,Έτ²%ΐ1γν―,―π―¬δ7ε0 ιΔ; R3 ^®    Χ ^.Δς²%    δν―,―π―¬‘FγΆΜ ¦…ξD¤f ^®      I ^.PΗ5®€¥`)!­Ξ^.–z#®Lt¥‘d’¬PΗ5.ρ/­@ή›–Ϊαρ/-ρ/­Ε¨qΖª΅ρ/-΄―Η«5qJz΄¬ςeζ,\€µ«    Ήzª΄―Η+³―Η«ΰ­#z΄¬ςeζ,\€µ«Ρΐ#Έzª³―Η+όπ/­b#Ή?„όπ/-όπ/­      –ϋπ/-ΐΖ5®3k£s'!­ ^.¥z#®ύ”j£¶`’¬ΐΖ5.
+ρ/­@ήA«“
+ρ/-
+ρ/­    *6…
+ρ/-΄―Η«Α½z΄¬ςeζ,\€µ«    Ήzª΄―Η+³―Η«    z΄¬ςeζ,\€µ«Ο#Έzª³―Η+όπ/­Λu²5όπ/-ϋπ/­Έ·δΗϋπ/-κ°j―)―/ξ―¬\0p/κ°j―³ªυΊΔΙ κ°j/Ό―Η«ΖYz΄¬τeζ,f€µ«ΊsR¶zªΌ―Η+όπ/­€ύ«®Αόπ/-όπ/­Εθρ-όπ/-όπ/­·ΈΚUyτόπ/-όπ/­7 α¤λόπ/-³―Η«€ύ+z΄¬σeζ,\€µ«    ·zª³―Η+Ζπ―,€ύ«  Ζπ―¬^0p/b"½lν―¬τ°j―τ°j―€ύ+lν―¬^0p/_0p/jNrlν―¬τ°j――π―¬    1.κ―π―,ή―Η«¦ω£z΄¬ωeζ,Z€µ«    |ªή―Η+―π―¬b#Yξρ―π―,ΕΙ5®Te9¦2!­^.Hz#®ν^9¦v’¬ΕΙ5.―π―¬      °π―,ΖΙ5®e9¦2!­^.Hz#®z_9¦v’¬ΖΙ5.y9&τ19&κ2‚ ~&¥°:0βye>    y …@   @   @r.2    y …@   @r.2LD>   @r.2ςÿ@.2VD>   @®.2­.3­.2­.3UD>   @θ§µ4ώÿ@®.2®.3VD>   @XD>   @Έ.2Ή.3 …@   @   @¬.2­.3VD>   @XD>   @&/2&/3 …@   @ϋÿ@χÿ@  θ €
+  ‡  €— \^® `
+  ΐΈ \^.ς²%    0ξ―,όπ―¬όπ―¬ ΰ, 0ξ―,θφ²%Ύdf, €
+   ΐdf¬Ώdf¬     ΐPΏdf,φef, P
+  `η ψef¬ψef¬ `
+  `η φef,ς²% P0ξ―,όπ―¬όπ―¬ P0ξ―,Έτ²% `l δΖ }α πa ^®     F ^.xσ²%  0ξ―,ϋπ―¬όπ―¬ €/ξ―,Ότ²%Ϊef, `
+  ™ άef¬άef¬ €
+    Ϊef,ςef,      Rςef¬ςef¬      Rςef,xσ²%    0ξ―,όπ―¬όπ―¬    0ξ―,xσ²%\0p/     €Y!\0p― €I΅ Π  €ƒ!€>‹οef, `  ΰ{!τef¬τef¬ €
+  w!πef,”ς²%  0ξ―,όπ―¬όπ―¬ €$ 0ξ―, ο²%rξ²%  5 0ξ―,όπ―¬όπ―¬  5 0ξ―,`ν²%ρef, `
+  ΰ ςef¬ςef¬     ΰ ςef,Ζπ―¬  ϊν―, ς²%F$40    ΐ>N#G$4°F$40     pσ"G$4°G$40 \ €σ#"F$4°’ς²% €γν―,―π―¬ψef,     € ϊef¬ϊef¬     € ψef,χ²% Ψΰγν―,®π―¬   5  @£   μ ^®     @ζ ^.Δς²%    δν―,―π―¬  H$   Τ ΰj ^®      I ^.PΗ5®L¥`)!­Ξ^.–z#®hs¥‘d’¬PΗ5.ρ/­     ΐτρ/-ρ/­ `  ρ/-΄―Η« @z΄¬ςeζ,\€µ«    Ήzª΄―Η+³―Η« @z΄¬ςeζ,\€µ« PΈzª³―Η+όπ/­    όπ/-όπ/­      –ϋπ/-ΐΖ5® k£t'!­ ^.¥z#®€j£¶`’¬ΐΖ5.
+ρ/­     ` 
+ρ/-
+ρ/­      –
+ρ/-΄―Η« €
+z΄¬ςeζ,\€µ«    Ήzª΄―Η+³―Η«    z΄¬ςeζ,\€µ« \Έzª³―Η+όπ/­     @ όπ/-ϋπ/­ € €όπ/-κ°j―    /ξ―¬\0p/κ°j― €O  ΐΓ κ°j/Ό―Η« \
+z΄¬τeζ,f€µ«  P¶zªΌ―Η+όπ/­ ` @: όπ/-όπ/­ €
+  όπ/-όπ/­ \
+   ! όπ/-όπ/­ €O   "όπ/-³―Η« `
+z΄¬σeζ,\€µ«    ·zª³―Η+Ζπ―, `  Ζπ―¬^0p/  Plν―¬τ°j―τ°j― `
+lν―¬^0p/_0p/ ΐlν―¬τ°j――π―¬     @? ―π―,ή―Η« €
+z΄¬ψeζ,Z€µ«    |ªή―Η+―π―¬    L °π―,ΕΙ5®d9¦2!­^.Hz#®`^9¦v’¬ΕΙ5.―π―¬      °π―,ΖΙ5®d9¦2!­^.Hz#®λ^9¦v’¬ΖΙ5. 9&  9& @T ~&¥°

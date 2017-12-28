@@ -1,0 +1,44 @@
+# header information:
+Hdyna_inverter|9.06
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tbicmos|ScaleFORbicmos()D350.0
+Tmocmos|ScaleFORmocmos()D350.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+Tmocmossub|ScaleFORmocmossub()D350.0
+
+# Cell dyna_inverter;1{sch}
+Cdyna_inverter;1{sch}||schematic|1447809499677|1447811382154|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||11.5|19.5||||
+NOff-Page|conn@1||13|30.5||||
+NOff-Page|conn@4||30|24||||
+NGround|gnd@0||23|6.5||||
+NTransistor|nmos@0||21|19.5|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S10|SIM_spice_model(D5G1;Y-2.5;)SN
+NTransistor|nmos@1||21|11.5|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S10|SIM_spice_model(D5G1;Y-2.5;)SN
+NWire_Pin|pin@0||18|28||||
+NWire_Pin|pin@1||18|11.5||||
+NWire_Pin|pin@5||18|30.5||||
+Ngeneric:Invisible-Pin|pin@10||7|12.5|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 3.3,vin clock 0 pulse(3.3 0 0 100p 100p 10n 20n),vin1 A 0 pulse(3.3 0 0 100p 100p 10n 20n),.trans 0 50n,".include C:\\Users\\Parmanand\\Desktop\\Electric\\MOSmodel.txt"]
+NWire_Pin|pin@23||23|24||||
+NTransistor|pmos@0||21|28|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S10|SIM_spice_model(D5G1;Y-2;)SP
+NPower|pwr@0||23|33||||
+Awire|net@1|||900|pin@0||18|28|pin@1||18|11.5
+Awire|net@2|||1800|pin@1||18|11.5|nmos@1|g|20|11.5
+Awire|net@7|||900|nmos@0|s|23|17.5|nmos@1|d|23|13.5
+Awire|net@9|||0|pmos@0|g|20|28|pin@0||18|28
+Awire|net@10|||2700|pin@0||18|28|pin@5||18|30.5
+Awire|net@12|||0|nmos@0|g|20|19.5|conn@0|y|13.5|19.5
+Awire|net@13|||0|pin@5||18|30.5|conn@1|y|15|30.5
+Awire|net@23|||900|nmos@1|s|23|9.5|gnd@0||23|8.5
+Awire|net@55|||2700|pmos@0|d|23|30|pwr@0||23|33
+Awire|net@58|||900|pmos@0|s|23|26|pin@23||23|24
+Awire|net@59|||900|pin@23||23|24|nmos@0|d|23|21.5
+Awire|net@60|||0|conn@4|a|28|24|pin@23||23|24
+EA||D5G2;X-1;|conn@0|a|I
+Eclock||D5G2;X-3;|conn@1|a|C
+Eoutput||D5G2;|conn@4|y|O
+Evdd||D5G2;X3.5;|pwr@0||P
+X

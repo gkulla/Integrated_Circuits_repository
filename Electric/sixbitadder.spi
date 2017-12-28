@@ -1,0 +1,73 @@
+*** SPICE deck for cell sixbitadder{sch} from library sixbitadder
+*** Created on Tue Nov 24, 2015 18:51:35
+*** Last revised on Tue Nov 24, 2015 19:52:47
+*** Written on Tue Nov 24, 2015 20:11:19 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT nand_gate__nand_gate FROM CELL nand_gate:nand_gate{sch}
+.SUBCKT nand_gate__nand_gate A B F vdd
+** GLOBAL 0
+** GLOBAL vdd
+Mnmos-4_0 net_120 B 0 0 N L=0.7U W=3.5U
+Mnmos-4_1 F A net_120 0 N L=0.7U W=3.5U
+Mpmos-4_0 vdd B F vdd P L=0.7U W=14U
+Mpmos-4_1 vdd A F vdd P L=0.7U W=14U
+.ENDS nand_gate__nand_gate
+
+*** SUBCIRCUIT xor_gate__xor_gate1 FROM CELL xor_gate:xor_gate1{sch}
+.SUBCKT xor_gate__xor_gate1 A B F vdd
+** GLOBAL 0
+** GLOBAL vdd
+Mnmos-4_0 net_196 B 0 0 N L=0.7U W=3.5U
+Mnmos-4_1 net_0 A net_196 0 N L=0.7U W=3.5U
+Mnmos-4_2 net_191 net_0 0 0 N L=0.7U W=3.5U
+Mnmos-4_3 net_35 A net_191 0 N L=0.7U W=3.5U
+Mnmos-4_4 net_204 B 0 0 N L=0.7U W=3.5U
+Mnmos-4_5 net_70 net_0 net_204 0 N L=0.7U W=3.5U
+Mnmos-4_6 net_200 net_70 0 0 N L=0.7U W=3.5U
+Mnmos-4_7 F net_35 net_200 0 N L=0.7U W=3.5U
+Mpmos-4_0 vdd B net_0 vdd P L=0.7U W=14U
+Mpmos-4_1 vdd A net_0 vdd P L=0.7U W=14U
+Mpmos-4_2 vdd net_0 net_35 vdd P L=0.7U W=14U
+Mpmos-4_3 vdd A net_35 vdd P L=0.7U W=14U
+Mpmos-4_4 vdd B net_70 vdd P L=0.7U W=14U
+Mpmos-4_5 vdd net_0 net_70 vdd P L=0.7U W=14U
+Mpmos-4_6 vdd net_70 F vdd P L=0.7U W=14U
+Mpmos-4_7 vdd net_35 F vdd P L=0.7U W=14U
+.ENDS xor_gate__xor_gate1
+
+*** SUBCIRCUIT fulladder__fulladder FROM CELL fulladder:fulladder{sch}
+.SUBCKT fulladder__fulladder A B Cin Cout S
+** GLOBAL 0
+** GLOBAL vdd
+Xnand_gat_0 Cin net_11 net_17 vdd nand_gate__nand_gate
+Xnand_gat_1 B A net_19 vdd nand_gate__nand_gate
+Xnand_gat_2 net_17 net_19 Cout vdd nand_gate__nand_gate
+Xxor_gate_0 net_11 Cin S vdd xor_gate__xor_gate1
+Xxor_gate_1 A B net_11 vdd xor_gate__xor_gate1
+.ENDS fulladder__fulladder
+
+.global 0 vdd
+
+*** TOP LEVEL CELL: sixbitadder{sch}
+Xfulladde_0 A0 B0 Cin C1 S0 fulladder__fulladder
+Xfulladde_1 A1 B1 C1 C2 S1 fulladder__fulladder
+Xfulladde_2 A2 B2 C2 C3 S2 fulladder__fulladder
+Xfulladde_3 A3 B3 C3 Cout S3 fulladder__fulladder
+
+* Spice Code nodes in cell cell 'sixbitadder{sch}'
+vdd vdd 0 DC 3.3
+vgnd gnd 0 DC 0
+vinA0 A0 0 pwl(0 3.3)
+vinA1 A1 0 pwl(0 3.3)
+vinA2 A2 0 pwl(0 0)
+vinA3 A3 0 pwl(0 3.3)
+vinB0 B0 0 pwl(0 3.3)
+vinB1 B1 0 pwl(0 0)
+vinB2 B2 0 pwl(0 3.3)
+vinB3 B3 0 pwl(0 3.3)
+vinCin Cin 0 pwl(0 0)
+.trans 0 5ns
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

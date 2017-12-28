@@ -1,0 +1,35 @@
+*** SPICE deck for cell xor_gate1{sch} from library xor_gate
+*** Created on Tue Nov 24, 2015 00:52:35
+*** Last revised on Tue Nov 24, 2015 01:26:58
+*** Written on Tue Nov 24, 2015 01:42:36 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global 0 vdd
+
+*** TOP LEVEL CELL: xor_gate1{sch}
+Mnmos-4_0 net_196 B 0 0 N L=0.7U W=3.5U
+Mnmos-4_1 net_0 A net_196 0 N L=0.7U W=3.5U
+Mnmos-4_2 net_191 net_0 0 0 N L=0.7U W=3.5U
+Mnmos-4_3 net_35 A net_191 0 N L=0.7U W=3.5U
+Mnmos-4_4 net_204 B 0 0 N L=0.7U W=3.5U
+Mnmos-4_5 net_70 net_0 net_204 0 N L=0.7U W=3.5U
+Mnmos-4_6 net_200 net_70 0 0 N L=0.7U W=3.5U
+Mnmos-4_7 F net_35 net_200 0 N L=0.7U W=3.5U
+Mpmos-4_0 vdd B net_0 vdd P L=0.7U W=14U
+Mpmos-4_1 vdd A net_0 vdd P L=0.7U W=14U
+Mpmos-4_2 vdd net_0 net_35 vdd P L=0.7U W=14U
+Mpmos-4_3 vdd A net_35 vdd P L=0.7U W=14U
+Mpmos-4_4 vdd B net_70 vdd P L=0.7U W=14U
+Mpmos-4_5 vdd net_0 net_70 vdd P L=0.7U W=14U
+Mpmos-4_6 vdd net_70 F vdd P L=0.7U W=14U
+Mpmos-4_7 vdd net_35 F vdd P L=0.7U W=14U
+
+* Spice Code nodes in cell cell 'xor_gate1{sch}'
+vdd vdd 0 DC 3.3
+vgnd gnd 0 DC 0
+vinA A 0 pwl(0 0 1ns 0 2ns 3.3 3ns 3.3)
+vinB B 0 pwl(0 0 1ns 3.3 2ns 0 3ns 3.3)
+.trans 0  4ns
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

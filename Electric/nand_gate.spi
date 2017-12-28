@@ -1,0 +1,23 @@
+*** SPICE deck for cell nand_gate{sch} from library nand_gate
+*** Created on Sun Nov 22, 2015 19:17:06
+*** Last revised on Wed Nov 25, 2015 13:11:26
+*** Written on Wed Nov 25, 2015 13:11:30 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global 0 vdd
+
+*** TOP LEVEL CELL: nand_gate:nand_gate{sch}
+Mnmos-4_0 net_120 B 0 0 N L=0.7U W=3.5U
+Mnmos-4_1 F A net_120 0 N L=0.7U W=3.5U
+Mpmos-4_0 vdd B F vdd P L=0.7U W=14U
+Mpmos-4_1 vdd A F vdd P L=0.7U W=14U
+
+* Spice Code nodes in cell cell 'nand_gate:nand_gate{sch}'
+vdd vdd 0 DC 3.3
+vgnd gnd 0 DC 0
+vinA A 0 pwl(0 0 1ns 0 2ns 3.3 3ns 3.3)
+vinB B 0 pwl(0 0 1ns 3.3 2ns 0 3ns 3.3)
+.trans 0  3ns
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

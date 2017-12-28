@@ -1,0 +1,21 @@
+*** SPICE deck for cell dyna_inverter{sch} from library dyna_inverter
+*** Created on Tue Nov 17, 2015 20:18:19
+*** Last revised on Tue Nov 17, 2015 20:49:42
+*** Written on Tue Nov 17, 2015 20:49:48 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global 0 vdd
+
+*** TOP LEVEL CELL: dyna_inverter{sch}
+Mnmos_0 output A net_7 0 N L=0.7U W=3.5U
+Mnmos_1 net_7 clock 0 0 N L=0.7U W=3.5U
+Mpmos_0 vdd clock output vdd P L=0.7U W=3.5U
+
+* Spice Code nodes in cell cell 'dyna_inverter{sch}'
+vdd vdd 0 DC 3.3
+vin clock 0 pulse(3.3 0 0 100p 100p 10n 20n)
+vin1 A 0 pulse(3.3 0 0 100p 100p 10n 20n)
+.trans 0 50n
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END

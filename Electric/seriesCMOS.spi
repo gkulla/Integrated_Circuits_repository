@@ -1,0 +1,20 @@
+*** SPICE deck for cell seriesCMOS{lay} from library inverter1
+*** Created on Thu Oct 15, 2015 00:11:33
+*** Last revised on Thu Oct 15, 2015 02:04:54
+*** Written on Thu Oct 15, 2015 02:05:00 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: seriesCMOS{lay}
+Mnmos_0 net_60 input net_1 0 N L=0.7U W=3.5U AS=12.862P AD=3.062P PS=15.4U PD=5.25U
+Mnmos_1 output net_1 net_60 0 N L=0.7U W=3.5U AS=3.062P AD=13.781P PS=5.25U PD=15.75U
+Mpmos_0 net_61 input net_1 vdd P L=0.7U W=7U AS=12.862P AD=6.125P PS=15.4U PD=8.75U
+Mpmos_1 output net_1 net_61 vdd P L=0.7U W=7U AS=6.125P AD=13.781P PS=8.75U PD=15.75U
+
+* Spice Code nodes in cell cell 'seriesCMOS{lay}'
+vdd vdd 0 DC 1.8
+vgnd gnd 0 DC 0
+vin input 0 pulse(1.8 0 0 100p 100p 10n 20n)
+.trans 0 50n
+.include C:\Users\Parmanand\Desktop\Electric\MOSmodel.txt
+.END
